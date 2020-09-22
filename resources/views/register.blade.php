@@ -62,7 +62,7 @@
     <header>
 
         <!-- Navbar -->
-        @include('menu')
+        @include('layouts.menu')
         <!-- Navbar -->
 
         <!-- Intro Section -->
@@ -215,6 +215,6 @@
     </header>
     <!-- Main Navigation -->
 
-    @include('script')
+    @include('layouts.script')
 </body>
 @endsection

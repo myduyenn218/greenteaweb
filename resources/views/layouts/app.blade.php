@@ -13,6 +13,7 @@
     <!-- Material Design Bootstrap -->
     <link href="{{asset('/css/mdb.min.css')}}" rel="stylesheet">
     <!-- Your custom styles (optional) -->
+    <link href="{{asset('/css/style.css')}}" rel="stylesheet">
     @yield('style')
 
 

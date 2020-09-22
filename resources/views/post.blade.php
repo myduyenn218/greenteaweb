@@ -40,7 +40,7 @@
     <!-- Main Navigation -->
     <header>
 
-        @include('menu')
+        @include('layouts.menu')
         <!-- Intro Section -->
         <div class="view jarallax" data-jarallax='{"speed": 0.2}'
             style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
@@ -463,6 +463,6 @@
     <!-- Footer -->
 
     <!-- SCRIPTS -->
-    @include('script')
+    @include('layouts.script')
 </body>
 @endsection

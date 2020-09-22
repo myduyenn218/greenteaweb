@@ -38,7 +38,7 @@
     <!-- Main Navigation -->
     <header>
 
-        @include('menu')
+        @include('layouts.menu')
         <!-- Intro Section -->
         <section class="view intro-2">
             <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
@@ -101,7 +101,7 @@
     <!-- Main Navigation -->
 
     <!-- SCRIPTS -->
-    @include('script')
+    @include('layouts.script')
 
 </body>
 @endsection
