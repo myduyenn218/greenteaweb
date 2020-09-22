@@ -27,3 +27,12 @@ Route::get('/register', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/page-create', function () {
+    return view('page-creator');
+});
+Route::get('/my-project', function () {
+    return view('my-project');
+});
+Route::get('/profile', function () {
+    return view('profile');
+});
