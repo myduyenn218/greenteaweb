@@ -18,8 +18,18 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::get("/","App\\Http\\Controllers\\HomeController@home");
 
-Route::get("login","App\\Http\\Controllers\\Auth\\LoginControler@showLogin");
-Route::post("login","App\\Http\\Controllers\\Auth\\LoginControler@showLogin")->name("login");
+Route::get("login",[\App\Http\Controllers\Auth\LoginControler::class,'showLogin']);
+Route::post("login",[\App\Http\Controllers\Auth\LoginControler::class,'doLogin'])->name("login");
+
 Route::get('/about', function () {
     return view('about');
+});
+Route::get('/page-create', function () {
+    return view('page-creator');
+});
+Route::get('/my-project', function () {
+    return view('my-project');
+});
+Route::get('/profile', function () {
+    return view('profile');
 });

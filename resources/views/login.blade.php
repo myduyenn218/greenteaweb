@@ -79,7 +79,7 @@
 
                                     <div class="md-form">
                                         <i class="fas fa-lock prefix white-text"></i>
-                                        <input type="password" id="orangeForm-pass" name="password" class="form-control">
+                                        <input type="password" id="orangeForm-pass" name="pass" class="form-control">
                                         <label for="orangeForm-pass">Your password</label>
                                     </div>
                                         {{-- ReCaptcha here --}}
