@@ -5,8 +5,7 @@
 @section('content')
 @section('style')
 <!-- Custom styles -->
-<style>
-    <!-- Custom styles
+<!-- Custom styles
     -->
 <style>
     html,
@@ -37,6 +36,7 @@
     }
 </style>
 @endsection
+@section('content')
 
 <body class="about-page">
 
@@ -495,5 +495,4 @@
     </script>
 
 </body>
-
-</html>
+@endsection
