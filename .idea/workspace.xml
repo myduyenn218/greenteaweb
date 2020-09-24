@@ -205,7 +205,8 @@
       <workItem from="1600741001907" duration="3789000" />
       <workItem from="1600744925540" duration="657000" />
       <workItem from="1600745721130" duration="7931000" />
-      <workItem from="1600847739474" duration="680000" />
+      <workItem from="1600847739474" duration="709000" />
+      <workItem from="1600912230166" duration="1215000" />
     </task>
     <task id="LOCAL-00001" summary="cem">
       <created>1600761310550</created>
@@ -221,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600847806470</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clogin">
+      <created>1600848816452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600848816452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +324,10 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1846" y="310" width="480" height="287" key="SymfonyComponentCompositeDataDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741603827" />
+    <state x="1681" y="183" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600848826689">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="1681" y="183" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600848826689" />
     <state x="1750" y="199" width="672" height="677" key="run.anything.popup" timestamp="1600763622242">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
