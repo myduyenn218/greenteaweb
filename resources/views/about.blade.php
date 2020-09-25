@@ -133,21 +133,19 @@
                 <!-- Section heading -->
                 <h2 class="text-center my-5 h1">Our Product</h2>
                 <!-- Section description -->
-                <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui
-                    officia deserunt mollit anim id est laborum.</p>
+                <p class="text-center mb-5 w-responsive mx-auto">Dưới đây là một số sản phẩm mà nhóm chúng mình đã hoàn
+                    thành.</p>
 
                 <!-- Grid row -->
-                <div class="row">
 
+                <div class="row">
+                    @foreach($products as $product)
                     <!-- Grid column -->
                     <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1 mb-2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
-                                class="img-fluid" alt="First sample image">
+                            <img src="{{$product->images()->first()->url}}" class="img-fluid" alt="First sample
+                            image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -157,65 +155,15 @@
                         <a href="" class="pink-text">
                             <h6 class="mb-3 mt-3"><i class="fas fa-map "></i><strong> Environment</strong></h6>
                         </a>
-                        <h4 class="font-weight-bold mb-3">This is title of the news</h4>
-                        <p>by <a><strong>Billy Forester</strong></a>, 15/07/2016</p>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                            quod maxime
-                            placeat facere possimus voluptas.</p>
+                        <h4 class="font-weight-bold mb-3">{{$product->product_title}}</h4>
+                        <p>{{$product->content}}</p>
                         <a class="btn btn-primary">Read more</a>
                     </div>
-                    <!-- Grid column -->
 
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1 mb-2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                class="img-fluid" alt="Second sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Excerpt -->
-                        <a href="" class="indigo-text">
-                            <h6 class="mb-3 mt-3"><i class="fas fa-plane"></i><strong> Travels</strong></h6>
-                        </a>
-                        <h4 class="font-weight-bold mb-3">This is title of the news</h4>
-                        <p>by <a><strong>Billy Forester</strong></a>, 12/07/2016</p>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum
-                            deleniti atque corrupti quos dolores.</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1 mb-2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg"
-                                class="img-fluid" alt="Thrid sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Excerpt -->
-                        <a href="" class="cyan-text">
-                            <h6 class="mb-3 mt-3"><i class="fas fa-leaf "></i><strong> Animals</strong></h6>
-                        </a>
-                        <h4 class="font-weight-bold mb-3">This is title of the news</h4>
-                        <p>by <a><strong>Billy Forester</strong></a>, 10/07/2016</p>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, quia consequuntur
-                            magni
-                            dolores eos qui ratione voluptatem.</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
+                    <!-- Grid row -->
+                    @endforeach
                 </div>
-                <!-- Grid row -->
+
 
             </section>
             <!-- Section: Blog v.2 -->
@@ -230,7 +178,7 @@
                 <!-- Section description -->
                 <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số
                     dự án mà chúng tôi đang triển khai và thực hiện.</p>
-                @foreach ($products as $product)
+                @foreach ($activitis as $activity)
 
                 <!-- Grid row -->
                 <div class="row">
@@ -239,7 +187,7 @@
                     <div class="col-lg-4 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1">
-                            <img src="{{$product->images()->first()->url}}" class="img-fluid" alt="First sample image">
+                            <img src="{{$activity->images()->first()->url}}" class="img-fluid" alt="First sample image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -254,8 +202,8 @@
                             <h6 class="pb-1"><i class="fas fa-heart"></i><strong>
                                 </strong></h6>
                         </a>
-                        <h4 class="mb-4"><strong>{{$product->product_title}}</strong></h4>
-                        <p>{{$product->content}}.</p>
+                        <h4 class="mb-4"><strong>{{$activity->product_title}}</strong></h4>
+                        <p>{{$activity->content}}.</p>
                         {{-- <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p> --}}
                         <a class="btn btn-primary">Read more</a>
                     </div>
@@ -265,7 +213,7 @@
                 <!-- Grid row -->
 
                 @endforeach
-                {{ $products->render('pagination') }}
+                {{ $activitis->render('pagination') }}
 
                 <!-- Grid row -->
 

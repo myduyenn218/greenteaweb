@@ -10,11 +10,9 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $products = Product::paginate(3);
+        $activitis = Product::where('is_activity', '=', '1')->paginate(3); // activity
+        $products = Product::where('is_activity', '=', '0')->limit(3)->get(); // activity
         $users = DB::table('users')->whereBetween('student_code', [0, 1])->get();
-        // echo ($users);
-
-
-        return view('about', ['products' => $products, 'users' => $users]);
+        return view('about', ['activitis' => $activitis, 'users' => $users,  'products' => $products]);
     }
 }
