@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +18,8 @@ use App\Http\Controllers\Auth;
 //});
 Route::get("/","App\\Http\\Controllers\\HomeController@home");
 
-Route::get("login",[Auth\LoginControler::class,'showLogin'])->name("login");
-Route::post("login",[Auth\LoginControler::class,'doLogin'])->name("login");
+Route::get("login",[\App\Http\Controllers\Auth\LoginControler::class,'showLogin']);
+Route::post("login",[\App\Http\Controllers\Auth\LoginControler::class,'doLogin'])->name("login");
 
 Route::get('register',[Auth\RegisterController::class,'showRegister'])->name('register');
 Route::post('register',[Auth\RegisterController::class,'doRegister'])->name('register');
@@ -29,10 +29,7 @@ Route::get('forgotpass', [Auth\ForgetPasswordController::class,'showForgetPass']
 Route::post('forgotpass', [Auth\ForgetPasswordController::class,'doForgetPass'])->name('forgotpass');
 Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::class,'doConfirmPassword'])->name('doconfirmpass');
 
-
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/project', "App\\Http\\Controllers\\ProjectController@project");
 Route::get('/page-create', function () {
     return view('page-creator');
 });

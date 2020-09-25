@@ -12,17 +12,20 @@
                     <a class="nav-link" href="{{asset('/')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{asset('/about')}}">About</a>
+                    <a class="nav-link" href="{{asset('/team')}}">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="{{asset('/project')}}">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{asset('/activity')}}">Activity</a>
                 </li>
             </ul>
-            <div class="md-form my-0 white-skin">
-
-                <a id="btn-signup" type="button" class="btn btn-outline-default waves-effect "
-                    href="{{asset('/login')}}">Login</a>
-            </div>
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
         </div>
     </div>
 </nav>
