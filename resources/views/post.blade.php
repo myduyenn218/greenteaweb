@@ -51,7 +51,7 @@
                             <div class="text-center">
                                 <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown"
                                     data-wow-delay="0.3s"><strong>welcome
-                                        to my blog</strong></h1>
+                                        to greentea team</strong></h1>
                                 <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
                                 <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s">
                                     <strong>Photography &
@@ -77,14 +77,12 @@
             <section class="my-5 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
 
                 <!-- Section heading -->
-                <h2 class="text-center my-5 h1">Recent posts</h2>
+                <h2 class="text-center my-5 h1">US PROJECT</h2>
 
                 <!-- Section description -->
-                <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui
-                    officia deserunt mollit anim id est laborum.</p>
+                <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số
+                    dự án mà chúng tôi đang triển khai và thực hiện.</p>
+                @foreach ($jobs as $job)
 
                 <!-- Grid row -->
                 <div class="row">
@@ -93,8 +91,7 @@
                     <div class="col-lg-4 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                                alt="First sample image">
+                            <img src="{{$job->images()->first()->url}}" class="img-fluid" alt="First sample image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -106,13 +103,12 @@
                     <div class="col-lg-7 mb-4">
                         <!-- Excerpt -->
                         <a href="" class="teal-text">
-                            <h6 class="pb-1"><i class="fas fa-heart"></i><strong> Lifestyle </strong></h6>
+                            <h6 class="pb-1"><i class="fas fa-heart"></i><strong> {{  $job->jobtype-> name}}
+                                </strong></h6>
                         </a>
-                        <h4 class="mb-4"><strong>This is title of the news</strong></h4>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                            quod maxime
-                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor.</p>
-                        <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p>
+                        <h4 class="mb-4"><strong>{{$job->job_title}}</strong></h4>
+                        <p>{{$job->description}}.</p>
+                        {{-- <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p> --}}
                         <a class="btn btn-primary">Read more</a>
                     </div>
                     <!-- Grid column -->
@@ -121,142 +117,11 @@
                 <!-- Grid row -->
 
                 <hr class="mb-5">
+                @endforeach
+                {{ $jobs->render('pagination') }}
 
                 <!-- Grid row -->
-                <div class="row mt-3">
 
-                    <!-- Grid column -->
-                    <div class="col-lg-4 mb-4">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid"
-                                alt="Second sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-7 mb-4">
-                        <!-- Excerpt -->
-                        <a href="" class="cyan-text">
-                            <h6 class="pb-1"><i class="fas fa-plane"></i><strong> Travels</strong></h6>
-                        </a>
-                        <h4 class="mb-4"><strong>This is title of the news</strong></h4>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum
-                            deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p>
-                        <p>by <a><strong>Jessica Clark</strong></a>, 24/08/2016</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
-
-                <hr class="mb-5">
-
-                <!-- Grid row -->
-                <div class="row">
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 mb-4">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img (35).jpg" class="img-fluid"
-                                alt="Third sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-7 mb-4">
-                        <!-- Excerpt -->
-                        <a href="" class="brown-text">
-                            <h6 class="pb-1"><i class="fas fa-camera"></i><strong> Photography</strong></h6>
-                        </a>
-                        <h4 class="mb-4"><strong>This is title of the news</strong></h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequuntur magni
-                            dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <p>by <a><strong>Jessica Clark</strong></a>, 21/08/2016</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
-
-                <hr class="mb-5">
-
-                <!-- Grid row -->
-                <div class="row">
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 mb-4">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img (39).jpg" class="img-fluid"
-                                alt="Third sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-7 mb-4">
-                        <!-- Excerpt -->
-                        <a href="" class="red-text">
-                            <h6 class="pb-1"><i class="fas fa-heart"></i><strong> Lifestyle</strong></h6>
-                        </a>
-                        <h4 class="mb-4"><strong>This is title of the news</strong></h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequuntur magni
-                            dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <p>by <a><strong>Jessica Clark</strong></a>, 21/08/2016</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
-
-                <!-- Pagination dark -->
-                <nav class="wow fadeIn mb-4 mt-4" data-wow-delay="0.4s"
-                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                    <ul class="pagination pg-dark flex-center">
-                        <!-- Arrow left -->
-                        <li class="page-item">
-                            <a class="page-link waves-effect waves-effect" aria-label="Previous">
-                                <span aria-hidden="true">«</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-
-                        <!-- Numbers -->
-                        <li class="page-item active"><a class="page-link waves-effect waves-effect">1</a></li>
-                        <li class="page-item"><a class="page-link waves-effect waves-effect">2</a></li>
-                        <li class="page-item"><a class="page-link waves-effect waves-effect">3</a></li>
-                        <li class="page-item"><a class="page-link waves-effect waves-effect">4</a></li>
-                        <li class="page-item"><a class="page-link waves-effect waves-effect">5</a></li>
-
-                        <!-- Arrow right -->
-                        <li class="page-item">
-                            <a class="page-link waves-effect waves-effect" aria-label="Next">
-                                <span aria-hidden="true">»</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /Pagination dark -->
 
             </section>
             <!-- Section: Blog v.3 -->
