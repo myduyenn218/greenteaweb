@@ -22,7 +22,8 @@ Route::get("/", "App\\Http\\Controllers\\HomeController@home");
 Route::get("login", [\App\Http\Controllers\Auth\LoginControler::class, 'showLogin']);
 Route::post("login", [\App\Http\Controllers\Auth\LoginControler::class, 'doLogin'])->name("login");
 
-Route::get('/project', "App\\Http\\Controllers\\ProjectController@project");
+Route::get('/product', "App\\Http\\Controllers\\ProductController@product");
+Route::get('/activity', "App\\Http\\Controllers\\ActivityController@activity");
 Route::get('/page-create', function () {
     return view('page-creator');
 });

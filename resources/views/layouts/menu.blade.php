@@ -12,10 +12,13 @@
                     <a class="nav-link" href="{{asset('/')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{asset('/project')}}">Project</a>
+                    <a class="nav-link" href="{{asset('/team')}}">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="{{asset('/product')}}">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{asset('/activity')}}">Activity</a>
                 </li>
             </ul>
             <form class="form-inline">
