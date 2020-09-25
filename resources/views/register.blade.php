@@ -4,66 +4,66 @@
 
 @section('content')
 @section('style')
-<style>
-    html,
-    body,
-    header,
-    .view {
-        height: 100%;
-    }
-
-    @media (min-width: 851px) and (max-width: 1440px) {
-
+    <style>
         html,
         body,
         header,
         .view {
-            height: 850px;
+            height: 100%;
         }
-    }
 
-    @media (min-width: 800px) and (max-width: 850px) {
+        @media (min-width: 851px) and (max-width: 1440px) {
 
-        html,
-        body,
-        header,
-        .view {
-            height: 1000px;
+            html,
+            body,
+            header,
+            .view {
+                height: 850px;
+            }
         }
-    }
 
-    @media (min-width: 451px) and (max-width: 740px) {
+        @media (min-width: 800px) and (max-width: 850px) {
 
-        html,
-        body,
-        header,
-        .view {
-            height: 1200px;
+            html,
+            body,
+            header,
+            .view {
+                height: 1000px;
+            }
         }
-    }
 
-    @media (max-width: 450px) {
+        @media (min-width: 451px) and (max-width: 740px) {
 
-        html,
-        body,
-        header,
-        .view {
-            height: 1400px;
+            html,
+            body,
+            header,
+            .view {
+                height: 1200px;
+            }
         }
-    }
-</style>
+
+        @media (max-width: 450px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1400px;
+            }
+        }
+    </style>
 @endsection
 
 @section('content')
 
-<body class="register-page">
+    <body class="register-page">
 
     <!-- Main Navigation -->
     <header>
 
         <!-- Navbar -->
-        @include('layouts.menu')
-        <!-- Navbar -->
+    @include('layouts.menu')
+    <!-- Navbar -->
 
         <!-- Intro Section -->
         <section class="view intro-2">
@@ -169,29 +169,54 @@
 
                                             </div>
                                             <!-- /Grid row -->
-
                                             <!-- Body -->
-                                            <div class="md-form">
-                                                <i class="fas fa-user prefix"></i>
-                                                <input type="text" id="orangeForm-name" class="form-control">
-                                                <label for="orangeForm-name">Your name</label>
-                                            </div>
-                                            <div class="md-form">
-                                                <i class="fas fa-envelope prefix"></i>
-                                                <input type="text" id="orangeForm-email" class="form-control">
-                                                <label for="orangeForm-email">Your email</label>
-                                            </div>
-
-                                            <div class="md-form">
-                                                <i class="fas fa-lock prefix"></i>
-                                                <input type="password" id="orangeForm-pass" class="form-control">
-                                                <label for="orangeForm-pass">Your password</label>
-                                            </div>
-
-                                            <div class="text-center">
-                                                <button class="btn btn-indigo btn-rounded mt-5">Sign up</button>
-                                            </div>
-
+                                            <form action="{{route('register')}}" method="POST">
+                                                @csrf
+                                                @error('mes')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                                @error('name')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                                <div class="md-form">
+                                                    <i class="fas fa-user prefix"></i>
+                                                    <input type="text" id="orangeForm-name" name="name"
+                                                           class="form-control">
+                                                    <label for="orangeForm-name">Your name</label>
+                                                </div>
+                                                @error('email')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                                <div class="md-form">
+                                                    <i class="fas fa-envelope prefix"></i>
+                                                    <input type="text" name="email" id="orangeForm-email"
+                                                           class="form-control">
+                                                    <label for="orangeForm-email">Your email</label>
+                                                </div>
+                                                @error('pass')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                                <div class="md-form">
+                                                    <i class="fas fa-lock prefix"></i>
+                                                    <input type="password" name="pass" id="orangeForm-pass"
+                                                           class="form-control">
+                                                    <label for="orangeForm-pass">Your password</label>
+                                                </div>
+                                                @error('repass')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                                <div class="md-form">
+                                                    <i class="fas fa-lock prefix"></i>
+                                                    <input type="password" name="repass" id="orangeForm-repass"
+                                                           class="form-control">
+                                                    <label for="orangeForm-repass">Your Repassword</label>
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-indigo btn-rounded mt-5">Sign
+                                                        up
+                                                    </button>
+                                                </div>
+                                            </form>
                                         </div>
                                         <!-- Grid column -->
 
@@ -216,5 +241,5 @@
     <!-- Main Navigation -->
 
     @include('layouts.script')
-</body>
+    </body>
 @endsection

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +18,17 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::get("/","App\\Http\\Controllers\\HomeController@home");
 
-Route::get("login",[\App\Http\Controllers\Auth\LoginControler::class,'showLogin']);
-Route::post("login",[\App\Http\Controllers\Auth\LoginControler::class,'doLogin'])->name("login");
+Route::get("login",[Auth\LoginControler::class,'showLogin'])->name("login");
+Route::post("login",[Auth\LoginControler::class,'doLogin'])->name("login");
+
+Route::get('register',[Auth\RegisterController::class,'showRegister'])->name('register');
+Route::post('register',[Auth\RegisterController::class,'doRegister'])->name('register');
+Route::get('confirmemail/{email}/{key}', [Auth\RegisterController::class,'confirmEmail'])->name('confirmemail');
+
+Route::get('forgotpass', [Auth\ForgetPasswordController::class,'showForgetPass'])->name('forgotpass');
+Route::post('forgotpass', [Auth\ForgetPasswordController::class,'doForgetPass'])->name('forgotpass');
+Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::class,'doConfirmPassword'])->name('doconfirmpass');
+
 
 Route::get('/about', function () {
     return view('about');

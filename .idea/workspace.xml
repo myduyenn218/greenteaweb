@@ -19,8 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="clogin">
+    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="a">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mail/activeAccount.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mail/forgetPass.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mail/resetPass.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,13 +168,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Ini" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
     </key>
   </component>
@@ -177,14 +185,19 @@
       <command value="artisan make:controller HomeController" />
       <command value="artisan make:controller Auth/LoginControler" />
       <command value="artisan route:cache" />
-      <command value="artisan config:cache" />
-      <command value="artisan cache:clear" />
       <command value="artisan make:controller /Auth/LoginControler" />
       <command value="rout" />
-      <command value="artisan route:list" />
       <command value="artisan route:clear" />
-      <command value="artisan serve" />
+      <command value="artisan route:list" />
+      <command value="artisan queue:table" />
+      <command value="artisan make:migration" />
+      <command value="artisan migrate" />
+      <command value="artisan make:job SendEmail" />
+      <command value="artisan make:mail ActiveAccount" />
       <command value="artisan config:clear" />
+      <command value="artisan config:cache" />
+      <command value="artisan cache:clear" />
+      <command value="artisan serve" />
     </option>
   </component>
   <component name="RunManager">
@@ -206,7 +219,8 @@
       <workItem from="1600744925540" duration="657000" />
       <workItem from="1600745721130" duration="7931000" />
       <workItem from="1600847739474" duration="709000" />
-      <workItem from="1600912230166" duration="1215000" />
+      <workItem from="1600912230166" duration="9625000" />
+      <workItem from="1601003486687" duration="3261000" />
     </task>
     <task id="LOCAL-00001" summary="cem">
       <created>1600761310550</created>
@@ -229,7 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600848816452</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="a">
+      <created>1600916646423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600916646423</updated>
+    </task>
+    <task id="LOCAL-00005" summary="a">
+      <created>1600916653858</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600916653858</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +281,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cem" />
     <MESSAGE value="clogin" />
-    <option name="LAST_COMMIT_MESSAGE" value="clogin" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1669" y="108" width="824" height="691" key="#CLI_Interpreters" timestamp="1600741589596">
@@ -284,26 +313,26 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1869" y="197" width="424" height="521" key="FileChooserDialogImpl/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741597203" />
-    <state width="1394" height="67" key="GridCell.Tab.0.bottom" timestamp="1600764892873">
+    <state width="1394" height="106" key="GridCell.Tab.0.bottom" timestamp="1601006054839">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="67" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600764892873" />
-    <state width="1394" height="67" key="GridCell.Tab.0.center" timestamp="1600764892873">
+    <state width="1394" height="106" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054839" />
+    <state width="1394" height="106" key="GridCell.Tab.0.center" timestamp="1601006054838">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="67" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600764892873" />
-    <state width="1394" height="67" key="GridCell.Tab.0.left" timestamp="1600764892873">
+    <state width="1394" height="106" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054838" />
+    <state width="1394" height="106" key="GridCell.Tab.0.left" timestamp="1601006054838">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="67" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600764892873" />
-    <state width="1394" height="67" key="GridCell.Tab.0.right" timestamp="1600764892873">
+    <state width="1394" height="106" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054838" />
+    <state width="1394" height="106" key="GridCell.Tab.0.right" timestamp="1601006054838">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="67" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600764892873" />
+    <state width="1394" height="106" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054838" />
     <state x="1556" y="68" width="1247" height="757" key="MergeDialog" timestamp="1600761375146">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
@@ -328,15 +357,24 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1681" y="183" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600848826689" />
-    <state x="1750" y="199" width="672" height="677" key="run.anything.popup" timestamp="1600763622242">
+    <state x="1466" y="128" width="1240" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1600937196743">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="1466" y="128" width="1240" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600937196743" />
+    <state x="1775" y="151" width="622" height="592" key="find.popup" timestamp="1600936181166">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="1775" y="151" width="622" height="592" key="find.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600936181166" />
+    <state x="1750" y="199" width="672" height="677" key="run.anything.popup" timestamp="1601003738483">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="364" y="302" width="672" height="578" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763177478" />
-    <state x="1750" y="199" width="672" height="677" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600763622242" />
-    <state x="346" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1600763052162">
-      <screen x="0" y="132" width="1366" height="768" />
+    <state x="1750" y="199" width="672" height="677" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601003738483" />
+    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup" timestamp="1600936240588">
+      <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="346" y="221" width="672" height="678" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763052162" />
+    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600936240588" />
     <state x="1811" y="360" width="540" height="181" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600741158713">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
