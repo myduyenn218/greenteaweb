@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,7 @@ Route::get("/", "App\\Http\\Controllers\\HomeController@home");
 Route::get("login", [\App\Http\Controllers\Auth\LoginControler::class, 'showLogin']);
 Route::post("login", [\App\Http\Controllers\Auth\LoginControler::class, 'doLogin'])->name("login");
 
-Route::get('/project', function () {
-    return view('post');
-});
+Route::get('/project', "App\\Http\\Controllers\\ProjectController@project");
 Route::get('/page-create', function () {
     return view('page-creator');
 });
