@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home()
     {
-        $jobs = Job::paginate(3);
+        $users = User::all();
         // echo ($jobs);
         // dd($jobs->jobtype->name);
 
 
-        return view('about', ['jobs' => $jobs]);
+        return view('about', ['users' => $users]);
     }
 }

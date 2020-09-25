@@ -153,66 +153,6 @@
                 </div>
                 <!-- Grid row -->
 
-                <!-- Grid row -->
-                <div class="row text-center text-md-left">
-
-                    <!-- Grid column -->
-                    <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
-
-                        <div class="col-md-6 float-left">
-                            <div class="avatar mx-auto">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg" class="z-depth-1"
-                                    alt="Fourth sample avatar image">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 float-right">
-                            <h4 class="mt-md-0 mt-4"><strong>Anna Deynah</strong></h4>
-                            <h6 class="font-weight-bold grey-text mb-4">Web Developer</h6>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                                officiis hic
-                                tenetur.</p>
-
-                            <!-- Facebook -->
-                            <a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f"> </i></a>
-                            <!-- Twitter -->
-                            <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter"> </i></a>
-                            <!-- GitHub -->
-                            <a class="p-2 m-2 fa-lg git-ic"><i class="fab fa-github"> </i></a>
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="col-md-6 float-left">
-                            <div class="avatar mx-auto">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(29).jpg" class="z-depth-1"
-                                    alt="Fifth sample avatar image">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 float-right">
-                            <h4 class="mt-md-0 mt-4"><strong>Sarah Melyah</strong></h4>
-                            <h6 class="font-weight-bold grey-text mb-4">Front-end Developer</h6>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                                officiis hic
-                                tenetur.</p>
-
-                            <!-- Google + -->
-                            <a class="p-2 m-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"> </i></a>
-                            <!-- LinkedIn -->
-                            <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in"> </i></a>
-                            <!-- Email -->
-                            <a class="p-2 m-2 fa-lg email-ic"><i class="fas fa-envelope"> </i></a>
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
 
             </section>
             <!-- Section: Team v.3 -->
