@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('post');
 //});
-Route::get("/","App\\Http\\Controllers\\HomeController@home");
+Route::get("/", "App\\Http\\Controllers\\HomeController@home");
 
-Route::get("login",[\App\Http\Controllers\Auth\LoginControler::class,'showLogin']);
-Route::post("login",[\App\Http\Controllers\Auth\LoginControler::class,'doLogin'])->name("login");
+Route::get("login", [\App\Http\Controllers\Auth\LoginControler::class, 'showLogin']);
+Route::post("login", [\App\Http\Controllers\Auth\LoginControler::class, 'doLogin'])->name("login");
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/project', function () {
+    return view('post');
 });
 Route::get('/page-create', function () {
     return view('page-creator');

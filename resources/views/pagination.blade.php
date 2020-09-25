@@ -12,7 +12,7 @@
         </li>
         @else
         <li class="page-item">
-            <a href="{{ $paginator->previousPageUrl() }} class=" page-link waves-effect waves-effect"
+            <a href="{{ $paginator->previousPageUrl() }}" class="page-link waves-effect waves-effect"
                 aria-label="Previous">
                 <span aria-hidden="true">«</span>
                 <span class="sr-only">Previous</span>
@@ -55,8 +55,11 @@
         </li>
         @else
         <li class="page-item disabled">
-            <span aria-hidden="true">»</span>
-            <span class="sr-only">Next</span>
+            <a class="page-link waves-effect waves-effect" aria-label="Next">
+                <span aria-hidden="true">»</span>
+                <span class="sr-only">Next</span>
+
+            </a>
         </li>
         @endif
         {{-- <li class="page-item">

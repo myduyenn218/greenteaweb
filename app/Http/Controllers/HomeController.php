@@ -14,6 +14,6 @@ class HomeController extends Controller
         // dd($jobs->jobtype->name);
 
 
-        return view('post', ['jobs' => $jobs]);
+        return view('about', ['jobs' => $jobs]);
     }
 }
