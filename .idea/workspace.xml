@@ -19,14 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="a">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/activeAccount.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/forgetPass.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/resetPass.blade.php" afterDir="false" />
+    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="nothing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +183,6 @@
       <command value="artisan make:controller /Auth/LoginControler" />
       <command value="rout" />
       <command value="artisan route:clear" />
-      <command value="artisan route:list" />
       <command value="artisan queue:table" />
       <command value="artisan make:migration" />
       <command value="artisan migrate" />
@@ -198,6 +192,9 @@
       <command value="artisan config:cache" />
       <command value="artisan cache:clear" />
       <command value="artisan serve" />
+      <command value="artisan make:controller User/Profile" />
+      <command value="artisan make:controller User/Avatar" />
+      <command value="artisan route:list" />
     </option>
   </component>
   <component name="RunManager">
@@ -220,7 +217,7 @@
       <workItem from="1600745721130" duration="7931000" />
       <workItem from="1600847739474" duration="709000" />
       <workItem from="1600912230166" duration="9625000" />
-      <workItem from="1601003486687" duration="3261000" />
+      <workItem from="1601003486687" duration="11335000" />
     </task>
     <task id="LOCAL-00001" summary="cem">
       <created>1600761310550</created>
@@ -257,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600916653858</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="nothing">
+      <created>1601016800622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601016800622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +286,8 @@
     <MESSAGE value="cem" />
     <MESSAGE value="clogin" />
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1669" y="108" width="824" height="691" key="#CLI_Interpreters" timestamp="1600741589596">
@@ -313,34 +318,36 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1869" y="197" width="424" height="521" key="FileChooserDialogImpl/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741597203" />
-    <state width="1394" height="106" key="GridCell.Tab.0.bottom" timestamp="1601006054839">
+    <state width="1394" height="2" key="GridCell.Tab.0.bottom" timestamp="1601026175236">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="106" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054839" />
-    <state width="1394" height="106" key="GridCell.Tab.0.center" timestamp="1601006054838">
+    <state width="1394" height="2" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
+    <state width="1394" height="2" key="GridCell.Tab.0.center" timestamp="1601026175236">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="106" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054838" />
-    <state width="1394" height="106" key="GridCell.Tab.0.left" timestamp="1601006054838">
+    <state width="1394" height="2" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
+    <state width="1394" height="2" key="GridCell.Tab.0.left" timestamp="1601026175236">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="106" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054838" />
-    <state width="1394" height="106" key="GridCell.Tab.0.right" timestamp="1601006054838">
+    <state width="1394" height="2" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
+    <state width="1394" height="2" key="GridCell.Tab.0.right" timestamp="1601026175236">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="1320" height="218" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
-    <state width="1394" height="106" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601006054838" />
-    <state x="1556" y="68" width="1247" height="757" key="MergeDialog" timestamp="1600761375146">
+    <state width="1394" height="2" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
+    <state x="1461" y="60" width="1334" height="757" key="MergeDialog" timestamp="1601016901281">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1556" y="68" width="1247" height="757" key="MergeDialog/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600761375146" />
-    <state x="314" y="276" width="728" height="487" key="MultipleFileMergeDialog" timestamp="1600761375151">
-      <screen x="0" y="132" width="1366" height="768" />
+    <state x="1461" y="60" width="1334" height="757" key="MergeDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601016901281" />
+    <state x="1697" y="169" width="728" height="487" key="MultipleFileMergeDialog" timestamp="1601016901287">
+      <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="314" y="276" width="728" height="487" key="MultipleFileMergeDialog/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600761375151" />
+    <state x="1697" y="169" key="MultipleFileMergeDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601016901287" />
     <state x="1938" y="99" width="420" height="662" key="RollbackChangesDialog" timestamp="1600761554365">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
@@ -365,19 +372,30 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1775" y="151" width="622" height="592" key="find.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600936181166" />
-    <state x="1750" y="199" width="672" height="677" key="run.anything.popup" timestamp="1601003738483">
+    <state x="1750" y="199" width="672" height="677" key="run.anything.popup" timestamp="1601026098636">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="364" y="302" width="672" height="578" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763177478" />
-    <state x="1750" y="199" width="672" height="677" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601003738483" />
-    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup" timestamp="1600936240588">
+    <state x="1750" y="199" width="672" height="677" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026098636" />
+    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup" timestamp="1601026088385">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="346" y="221" width="672" height="678" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763052162" />
-    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600936240588" />
+    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026088385" />
     <state x="1811" y="360" width="540" height="181" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600741158713">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1811" y="360" width="540" height="181" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741158713" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/profile.blade.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

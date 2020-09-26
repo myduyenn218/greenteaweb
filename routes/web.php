@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth;
+use App\Http\Controllers\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('post');
 //});
-Route::get("/","App\\Http\\Controllers\\HomeController@home");
+Route::get("/",[\App\Http\Controllers\HomeController::class,'home']);
 
-Route::get("login",[\App\Http\Controllers\Auth\LoginControler::class,'showLogin']);
-Route::post("login",[\App\Http\Controllers\Auth\LoginControler::class,'doLogin'])->name("login");
+Route::get("login",[Auth\LoginControler::class,'showLogin']);
+Route::post("login",[Auth\LoginControler::class,'doLogin'])->name("login");
 
 Route::get('register',[Auth\RegisterController::class,'showRegister'])->name('register');
 Route::post('register',[Auth\RegisterController::class,'doRegister'])->name('register');
@@ -36,6 +37,8 @@ Route::get('/page-create', function () {
 Route::get('/my-project', function () {
     return view('my-project');
 });
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile', [User\Profile::class,'showProfile']);
+
+Route::post('/avatar',[User\Avatar::class,'uploadAvatar'])->name('uploadavatar');
+
+Route::post('/profile', [User\Profile::class,'changeProfile'])->name('changprofile');
