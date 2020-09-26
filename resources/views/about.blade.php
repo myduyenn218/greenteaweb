@@ -81,34 +81,27 @@
             <section class="section team-section wow fadeIn" data-wow-delay="0.3s">
 
                 <!-- Section heading -->
-                <h2 class="text-center my-5 h1">Our amazing team</h2>
+                <h2 class="text-center my-5 h1">Our team</h2>
 
                 <!-- Section description -->
-                <p class="text-center mb-5 w-responsive mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
-                    Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
-                    quisquam eum
-                    porro a pariatur veniam.</p>
+                <p class="text-center mb-5 w-responsive mx-auto">Dưới đây là những SUPERMAN của nhóm chúng mình.</p>
 
                 <!-- Grid row -->
                 <div class="row mb-lg-4 text-center text-md-left">
-
+                    @foreach($users as $user)
                     <!-- Grid column -->
                     <div class="col-lg-6 col-md-12 mb-4">
 
                         <div class="col-md-6 float-left">
                             <div class="avatar mx-auto">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" class="z-depth-1"
-                                    alt="First sample avatar image">
+                                <img src="{{$user->avt}}" class="z-depth-1" alt="First sample avatar image">
                             </div>
                         </div>
 
                         <div class="col-md-6 float-right">
-                            <h4 class="mt-md-0 mt-4"><strong>John Doe</strong></h4>
-                            <h6 class="font-weight-bold grey-text mb-4">Web Designer</h6>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                                officiis hic
-                                tenetur.</p>
+                            <h4 class="mt-md-0 mt-4"><strong>{{$user->last_name}} {{$user->first_name}}</strong></h4>
+                            {{-- <h6 class="font-weight-bold grey-text mb-4">Web Designer</h6> --}}
+                            <p class="grey-text">{{$user->content}}.</p>
 
                             <!-- Facebook -->
                             <a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f"> </i></a>
@@ -121,97 +114,12 @@
                     </div>
                     <!-- Grid column -->
 
-                    <!-- Grid column -->
-                    <div class="col-lg-6 col-md-12 mb-4">
+                    @endforeach
 
-                        <div class="col-md-6 float-left">
-                            <div class="avatar mx-auto">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="z-depth-1"
-                                    alt="Second sample avatar image">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 float-right">
-                            <h4 class="mt-md-0 mt-4"><strong>Maria Kate</strong></h4>
-                            <h6 class="font-weight-bold grey-text mb-4">Photographer</h6>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                                officiis hic
-                                tenetur.</p>
-
-                            <!-- Facebook -->
-                            <a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f"> </i></a>
-                            <!-- YouTube -->
-                            <a class="p-2 m-2 fa-lg yt-ic"><i class="fab fa-youtube"> </i></a>
-                            <!-- Instagram -->
-                            <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram"> </i></a>
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
 
                 </div>
                 <!-- Grid row -->
 
-                <!-- Grid row -->
-                <div class="row text-center text-md-left">
-
-                    <!-- Grid column -->
-                    <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
-
-                        <div class="col-md-6 float-left">
-                            <div class="avatar mx-auto">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg" class="z-depth-1"
-                                    alt="Fourth sample avatar image">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 float-right">
-                            <h4 class="mt-md-0 mt-4"><strong>Anna Deynah</strong></h4>
-                            <h6 class="font-weight-bold grey-text mb-4">Web Developer</h6>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                                officiis hic
-                                tenetur.</p>
-
-                            <!-- Facebook -->
-                            <a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f"> </i></a>
-                            <!-- Twitter -->
-                            <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter"> </i></a>
-                            <!-- GitHub -->
-                            <a class="p-2 m-2 fa-lg git-ic"><i class="fab fa-github"> </i></a>
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="col-md-6 float-left">
-                            <div class="avatar mx-auto">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(29).jpg" class="z-depth-1"
-                                    alt="Fifth sample avatar image">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 float-right">
-                            <h4 class="mt-md-0 mt-4"><strong>Sarah Melyah</strong></h4>
-                            <h6 class="font-weight-bold grey-text mb-4">Front-end Developer</h6>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                                officiis hic
-                                tenetur.</p>
-
-                            <!-- Google + -->
-                            <a class="p-2 m-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"> </i></a>
-                            <!-- LinkedIn -->
-                            <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in"> </i></a>
-                            <!-- Email -->
-                            <a class="p-2 m-2 fa-lg email-ic"><i class="fas fa-envelope"> </i></a>
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
 
             </section>
             <!-- Section: Team v.3 -->
@@ -225,21 +133,19 @@
                 <!-- Section heading -->
                 <h2 class="text-center my-5 h1">Our Product</h2>
                 <!-- Section description -->
-                <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui
-                    officia deserunt mollit anim id est laborum.</p>
+                <p class="text-center mb-5 w-responsive mx-auto">Dưới đây là một số sản phẩm mà nhóm chúng mình đã hoàn
+                    thành.</p>
 
                 <!-- Grid row -->
-                <div class="row">
 
+                <div class="row">
+                    @foreach($products as $product)
                     <!-- Grid column -->
                     <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1 mb-2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
-                                class="img-fluid" alt="First sample image">
+                            <img src="{{$product->images()->first()->url}}" class="img-fluid" alt="First sample
+                            image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -249,65 +155,15 @@
                         <a href="" class="pink-text">
                             <h6 class="mb-3 mt-3"><i class="fas fa-map "></i><strong> Environment</strong></h6>
                         </a>
-                        <h4 class="font-weight-bold mb-3">This is title of the news</h4>
-                        <p>by <a><strong>Billy Forester</strong></a>, 15/07/2016</p>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                            quod maxime
-                            placeat facere possimus voluptas.</p>
+                        <h4 class="font-weight-bold mb-3">{{$product->product_title}}</h4>
+                        <p>{{$product->content}}</p>
                         <a class="btn btn-primary">Read more</a>
                     </div>
-                    <!-- Grid column -->
 
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1 mb-2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                class="img-fluid" alt="Second sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Excerpt -->
-                        <a href="" class="indigo-text">
-                            <h6 class="mb-3 mt-3"><i class="fas fa-plane"></i><strong> Travels</strong></h6>
-                        </a>
-                        <h4 class="font-weight-bold mb-3">This is title of the news</h4>
-                        <p>by <a><strong>Billy Forester</strong></a>, 12/07/2016</p>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum
-                            deleniti atque corrupti quos dolores.</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Featured image -->
-                        <div class="view overlay z-depth-1 mb-2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg"
-                                class="img-fluid" alt="Thrid sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Excerpt -->
-                        <a href="" class="cyan-text">
-                            <h6 class="mb-3 mt-3"><i class="fas fa-leaf "></i><strong> Animals</strong></h6>
-                        </a>
-                        <h4 class="font-weight-bold mb-3">This is title of the news</h4>
-                        <p>by <a><strong>Billy Forester</strong></a>, 10/07/2016</p>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, quia consequuntur
-                            magni
-                            dolores eos qui ratione voluptatem.</p>
-                        <a class="btn btn-primary">Read more</a>
-                    </div>
-                    <!-- Grid column -->
-
+                    <!-- Grid row -->
+                    @endforeach
                 </div>
-                <!-- Grid row -->
+
 
             </section>
             <!-- Section: Blog v.2 -->
@@ -317,12 +173,12 @@
             <section class="my-5 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
 
                 <!-- Section heading -->
-                <h2 class="text-center my-5 h1">OUR PROJECT</h2>
+                <h2 class="text-center my-5 h1">ACTIVITY</h2>
 
                 <!-- Section description -->
                 <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số
                     dự án mà chúng tôi đang triển khai và thực hiện.</p>
-                @foreach ($jobs as $job)
+                @foreach ($activitis as $activity)
 
                 <!-- Grid row -->
                 <div class="row">
@@ -331,7 +187,7 @@
                     <div class="col-lg-4 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1">
-                            <img src="{{$job->images()->first()->url}}" class="img-fluid" alt="First sample image">
+                            <img src="{{$activity->images()->first()->url}}" class="img-fluid" alt="First sample image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -343,11 +199,11 @@
                     <div class="col-lg-7 mb-4">
                         <!-- Excerpt -->
                         <a href="" class="teal-text">
-                            <h6 class="pb-1"><i class="fas fa-heart"></i><strong> {{  $job->jobtype-> name}}
+                            <h6 class="pb-1"><i class="fas fa-heart"></i><strong>
                                 </strong></h6>
                         </a>
-                        <h4 class="mb-4"><strong>{{$job->job_title}}</strong></h4>
-                        <p>{{$job->description}}.</p>
+                        <h4 class="mb-4"><strong>{{$activity->product_title}}</strong></h4>
+                        <p>{{$activity->content}}.</p>
                         {{-- <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p> --}}
                         <a class="btn btn-primary">Read more</a>
                     </div>
@@ -357,7 +213,7 @@
                 <!-- Grid row -->
 
                 @endforeach
-                {{ $jobs->render('pagination') }}
+                {{ $activitis->render('pagination') }}
 
                 <!-- Grid row -->
 

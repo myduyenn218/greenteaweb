@@ -30,7 +30,8 @@ Route::get('forgotpass', [Auth\ForgetPasswordController::class,'showForgetPass']
 Route::post('forgotpass', [Auth\ForgetPasswordController::class,'doForgetPass'])->name('forgotpass');
 Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::class,'doConfirmPassword'])->name('doconfirmpass');
 
-Route::get('/project', "App\\Http\\Controllers\\ProjectController@project");
+Route::get('/product', "App\\Http\\Controllers\\ProductController@product");
+Route::get('/activity', "App\\Http\\Controllers\\ActivityController@activity");
 Route::get('/page-create', function () {
     return view('page-creator');
 });

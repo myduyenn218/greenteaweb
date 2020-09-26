@@ -15,7 +15,7 @@
                     <a class="nav-link" href="{{asset('/team')}}">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{asset('/project')}}">Product</a>
+                    <a class="nav-link" href="{{asset('/product')}}">Product</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{asset('/activity')}}">Activity</a>
