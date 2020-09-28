@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="updatef pofile">
+    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="fix updatef pofile">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +220,7 @@
       <workItem from="1600912230166" duration="9625000" />
       <workItem from="1601003486687" duration="11335000" />
       <workItem from="1601116057514" duration="7508000" />
-      <workItem from="1601262216216" duration="1587000" />
+      <workItem from="1601262216216" duration="3288000" />
     </task>
     <task id="LOCAL-00001" summary="cem">
       <created>1600761310550</created>
@@ -277,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601262484270</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix updatef pofile">
+      <created>1601264874437</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601264874437</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +313,8 @@
     <MESSAGE value="nothing" />
     <MESSAGE value="updatefpofile" />
     <MESSAGE value="updatef pofile" />
-    <option name="LAST_COMMIT_MESSAGE" value="updatef pofile" />
+    <MESSAGE value="fix updatef pofile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix updatef pofile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1669" y="108" width="824" height="691" key="#CLI_Interpreters" timestamp="1600741589596">
@@ -391,10 +400,10 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1846" y="310" width="480" height="287" key="SymfonyComponentCompositeDataDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741603827" />
-    <state x="299" y="288" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601262504229">
+    <state x="299" y="288" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601264891180">
       <screen x="0" y="132" width="1366" height="768" />
     </state>
-    <state x="299" y="288" key="Vcs.Push.Dialog.v2/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1601262504229" />
+    <state x="299" y="288" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1601264891180" />
     <state x="1681" y="183" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600848826689" />
     <state x="1466" y="128" width="1240" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1600937196743">
       <screen x="1366" y="0" width="1440" height="900" />
@@ -404,18 +413,18 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1775" y="151" width="622" height="592" key="find.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600936181166" />
-    <state x="364" y="184" width="672" height="532" key="run.anything.popup" timestamp="1601122174095">
-      <screen x="0" y="28" width="1366" height="706" />
+    <state x="364" y="302" width="672" height="578" key="run.anything.popup" timestamp="1601264760804">
+      <screen x="0" y="132" width="1366" height="768" />
     </state>
     <state x="364" y="184" width="672" height="532" key="run.anything.popup/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601122174095" />
     <state x="1730" y="170" width="672" height="578" key="run.anything.popup/1366.0.1366.768/0.28.1366.706@1366.0.1366.768" timestamp="1601116149758" />
-    <state x="364" y="302" width="672" height="578" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763177478" />
+    <state x="364" y="302" width="672" height="578" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1601264760804" />
     <state x="1750" y="199" width="672" height="677" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026098636" />
-    <state x="346" y="110" width="673" height="624" key="search.everywhere.popup" timestamp="1601119100036">
-      <screen x="0" y="28" width="1366" height="706" />
+    <state x="346" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1601264790295">
+      <screen x="0" y="132" width="1366" height="768" />
     </state>
     <state x="346" y="110" width="673" height="624" key="search.everywhere.popup/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601119100036" />
-    <state x="346" y="221" width="672" height="678" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763052162" />
+    <state x="346" y="221" width="672" height="678" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1601264790295" />
     <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026088385" />
     <state x="1811" y="360" width="540" height="181" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600741158713">
       <screen x="1366" y="0" width="1440" height="900" />
