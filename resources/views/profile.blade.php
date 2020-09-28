@@ -82,7 +82,6 @@
 
                             <!-- Card content -->
                             <div class="card-body card-body-cascade text-center">
-                                <form method="POST" action="{{route('uploadavatar')}}" enctype="multipart/form-data">
                                     <img
                                         src="{{$user->avatar==null?"https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg":$user->avatar}}"
                                         alt="User Photo"
@@ -95,7 +94,6 @@
                                         <br>
                                         <button type="submit" class="btn btn-danger btn-rounded btn-sm">Upload</button>
                                     </div>
-                                </form>
                             </div>
                             <!-- Card content -->
 
