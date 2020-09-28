@@ -73,20 +73,29 @@
                             <!-- Card image -->
                             <div class="view view-cascade gradient-card-header mdb-color lighten-3">
                                 <h5 class="mb-0 font-weight-bold">Edit Photo</h5>
+                                @error('avatar')
+                                <h6>{{ $message }}</h6>
+                                @enderror
+
                             </div>
                             <!-- Card image -->
 
                             <!-- Card content -->
                             <div class="card-body card-body-cascade text-center">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="User Photo"
-                                     class="z-depth-1 mb-3 mx-auto"/>
+                                <form method="POST" action="{{route('uploadavatar')}}" enctype="multipart/form-data">
+                                    <img
+                                        src="{{$user->avatar==null?"https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg":$user->avatar}}"
+                                        alt="User Photo"
+                                        class="z-depth-1 mb-3 mx-auto"/>
 
-                                <p class="text-muted"><small>Profile photo will be changed automatically</small></p>
-                                <div class="row flex-center">
-                                    <button class="btn btn-info btn-rounded btn-sm">Upload New Photo</button>
-                                    <br>
-                                    <button class="btn btn-danger btn-rounded btn-sm">Delete</button>
-                                </div>
+                                    <p class="text-muted"><small>Profile photo will be changed automatically</small></p>
+                                    <div class="row flex-center">
+                                        <input type="file" name="file" accept="image/*"
+                                               class="btn btn-info btn-rounded btn-sm">Upload New Photo</input>
+                                        <br>
+                                        <button type="submit" class="btn btn-danger btn-rounded btn-sm">Upload</button>
+                                    </div>
+                                </form>
                             </div>
                             <!-- Card content -->
 
@@ -105,6 +114,9 @@
                             <!-- Card image -->
                             <div class="view view-cascade gradient-card-header mdb-color lighten-3">
                                 <h5 class="mb-0 font-weight-bold">Edit Account</h5>
+                                @if(Session::has('mes'))
+                                    <small class="form-text text-success">{{ Session::get('ok') }}</small>
+                                @endif
                             </div>
                             <!-- Card image -->
 
@@ -112,13 +124,14 @@
                             <div class="card-body card-body-cascade text-center">
 
                                 <!-- Edit Form -->
-                                <form method="POST" action="{{route('changprofile')}}">
+                                <form method="POST" action="{{route('changprofile')}}" >
                                     @csrf
                                     <div class="row">
                                         <!-- First column -->
                                         <div class="col-md-6">
                                             <div class="md-form mb-0">
-                                                <input type="text" id="form81" name="first_name" value="{{$user->first_name}}" class="form-control validate">
+                                                <input type="text" id="form81" name="first_name"
+                                                       value="{{$user->first_name}}" class="form-control validate">
                                                 <label for="form81" data-error="wrong" data-success="right">First
                                                     name</label>
                                             </div>
@@ -127,7 +140,8 @@
                                         <!-- Second column -->
                                         <div class="col-md-6">
                                             <div class="md-form mb-0">
-                                                <input type="text" id="form82" name="last_name" value="{{$user->last_name}}" class="form-control validate">
+                                                <input type="text" id="form82" name="last_name"
+                                                       value="{{$user->last_name}}" class="form-control validate">
                                                 <label for="form82" data-error="wrong" data-success="right">Last
                                                     name</label>
                                             </div>
@@ -141,7 +155,8 @@
                                         <!-- First column -->
                                         <div class="col-md-6">
                                             <div class="md-form mb-0">
-                                                <input type="email" name="email" value="{{$user->email}}" disabled id="form76" class="form-control validate">
+                                                <input type="email" name="email" value="{{$user->email}}" disabled
+                                                       id="form76" class="form-control validate">
                                                 <label for="form76">Email address</label>
                                             </div>
                                         </div>
@@ -149,7 +164,8 @@
 
                                         <div class="col-md-6">
                                             <div class="md-form mb-0">
-                                                <input type="text" id="form77" name="phone" value="{{$user->phone}}" class="form-control validate">
+                                                <input type="text" id="form77" name="phone" value="{{$user->phone}}"
+                                                       class="form-control validate">
                                                 <label for="form77" data-error="wrong"
                                                        data-success="right">Phone</label>
                                             </div>
@@ -163,7 +179,8 @@
                                         <!-- First column -->
                                         <div class="col-md-12">
                                             <div class="md-form mb-0">
-                                                <textarea type="text"  name="content" id="form78"class="md-textarea form-control"
+                                                <textarea type="text" name="content" id="form78"
+                                                          class="md-textarea form-control"
                                                           rows="3">{{$user->content}}</textarea>
                                                 <label for="form78">About me</label>
                                             </div>

@@ -40,6 +40,4 @@ Route::get('/my-project', function () {
 });
 Route::get('/profile', [User\Profile::class,'showProfile']);
 
-Route::post('/avatar',[User\Avatar::class,'uploadAvatar'])->name('uploadavatar');
-
 Route::post('/profile', [User\Profile::class,'changeProfile'])->name('changprofile');

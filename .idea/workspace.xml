@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="nothing">
+    <list default="true" id="31b12ae3-4f25-4698-a6a5-82f6c43a822b" name="Default Changelist" comment="updatefpofile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Avatar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Avatar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -163,13 +166,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Ini" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/avartar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/avartar" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
     </key>
@@ -191,10 +195,11 @@
       <command value="artisan config:clear" />
       <command value="artisan config:cache" />
       <command value="artisan cache:clear" />
-      <command value="artisan serve" />
       <command value="artisan make:controller User/Profile" />
       <command value="artisan make:controller User/Avatar" />
+      <command value="php artisan storage:link" />
       <command value="artisan route:list" />
+      <command value="artisan serve" />
     </option>
   </component>
   <component name="RunManager">
@@ -218,6 +223,7 @@
       <workItem from="1600847739474" duration="709000" />
       <workItem from="1600912230166" duration="9625000" />
       <workItem from="1601003486687" duration="11335000" />
+      <workItem from="1601116057514" duration="7508000" />
     </task>
     <task id="LOCAL-00001" summary="cem">
       <created>1600761310550</created>
@@ -261,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601016800622</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updatefpofile">
+      <created>1601116216168</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601116216169</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +300,8 @@
     <MESSAGE value="clogin" />
     <MESSAGE value="a" />
     <MESSAGE value="nothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
+    <MESSAGE value="updatefpofile" />
+    <option name="LAST_COMMIT_MESSAGE" value="updatefpofile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1669" y="108" width="824" height="691" key="#CLI_Interpreters" timestamp="1600741589596">
@@ -298,14 +312,19 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1544" y="105" width="1084" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741629922" />
-    <state x="1808" y="247" width="546" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600739008696">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state x="419" y="222" width="813" height="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601122670338">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state x="419" y="222" width="813" height="326" key="#com.intellij.fileTypes.FileTypeChooser/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601122670338" />
     <state x="1808" y="247" width="546" height="406" key="#com.intellij.fileTypes.FileTypeChooser/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600739008696" />
     <state x="326" y="132" width="1030" height="768" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600745284148">
       <screen x="0" y="132" width="1366" height="768" />
     </state>
     <state x="326" y="132" width="1030" height="768" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600745284148" />
+    <state x="416" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601121978456">
+      <screen x="0" y="28" width="1366" height="706" />
+    </state>
+    <state x="416" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601121978456" />
     <state x="1791" y="328" width="582" height="252" key="ComposerCompositePathDialog" timestamp="1600741582287">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
@@ -318,24 +337,32 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1869" y="197" width="424" height="521" key="FileChooserDialogImpl/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600741597203" />
-    <state width="1394" height="2" key="GridCell.Tab.0.bottom" timestamp="1601026175236">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state width="1320" height="368" key="GridCell.Tab.0.bottom" timestamp="1601125946628">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state width="1320" height="368" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601125946628" />
+    <state width="1320" height="144" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.28.1366.706@1366.0.1366.768" timestamp="1601116230432" />
     <state width="1320" height="218" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
     <state width="1394" height="2" key="GridCell.Tab.0.bottom/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
-    <state width="1394" height="2" key="GridCell.Tab.0.center" timestamp="1601026175236">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state width="1320" height="368" key="GridCell.Tab.0.center" timestamp="1601125946628">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state width="1320" height="368" key="GridCell.Tab.0.center/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601125946628" />
+    <state width="1320" height="144" key="GridCell.Tab.0.center/1366.0.1366.768/0.28.1366.706@1366.0.1366.768" timestamp="1601116230432" />
     <state width="1320" height="218" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
     <state width="1394" height="2" key="GridCell.Tab.0.center/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
-    <state width="1394" height="2" key="GridCell.Tab.0.left" timestamp="1601026175236">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state width="1320" height="368" key="GridCell.Tab.0.left" timestamp="1601125946628">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state width="1320" height="368" key="GridCell.Tab.0.left/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601125946628" />
+    <state width="1320" height="144" key="GridCell.Tab.0.left/1366.0.1366.768/0.28.1366.706@1366.0.1366.768" timestamp="1601116230431" />
     <state width="1320" height="218" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
     <state width="1394" height="2" key="GridCell.Tab.0.left/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
-    <state width="1394" height="2" key="GridCell.Tab.0.right" timestamp="1601026175236">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state width="1320" height="368" key="GridCell.Tab.0.right" timestamp="1601125946628">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state width="1320" height="368" key="GridCell.Tab.0.right/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601125946628" />
+    <state width="1320" height="144" key="GridCell.Tab.0.right/1366.0.1366.768/0.28.1366.706@1366.0.1366.768" timestamp="1601116230432" />
     <state width="1320" height="218" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763194906" />
     <state width="1394" height="2" key="GridCell.Tab.0.right/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026175236" />
     <state x="1461" y="60" width="1334" height="757" key="MergeDialog" timestamp="1601016901281">
@@ -372,14 +399,17 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1775" y="151" width="622" height="592" key="find.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1600936181166" />
-    <state x="1750" y="199" width="672" height="677" key="run.anything.popup" timestamp="1601026098636">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state x="364" y="184" width="672" height="532" key="run.anything.popup" timestamp="1601122174095">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state x="364" y="184" width="672" height="532" key="run.anything.popup/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601122174095" />
+    <state x="1730" y="170" width="672" height="578" key="run.anything.popup/1366.0.1366.768/0.28.1366.706@1366.0.1366.768" timestamp="1601116149758" />
     <state x="364" y="302" width="672" height="578" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763177478" />
     <state x="1750" y="199" width="672" height="677" key="run.anything.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026098636" />
-    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup" timestamp="1601026088385">
-      <screen x="1366" y="0" width="1440" height="900" />
+    <state x="346" y="110" width="673" height="624" key="search.everywhere.popup" timestamp="1601119100036">
+      <screen x="0" y="28" width="1366" height="706" />
     </state>
+    <state x="346" y="110" width="673" height="624" key="search.everywhere.popup/1366.0.1366.768/0.28.1366.706@0.28.1366.706" timestamp="1601119100036" />
     <state x="346" y="221" width="672" height="678" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@0.132.1366.768" timestamp="1600763052162" />
     <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup/1366.0.1440.900/0.132.1366.768@1366.0.1440.900" timestamp="1601026088385" />
     <state x="1811" y="360" width="540" height="181" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600741158713">
