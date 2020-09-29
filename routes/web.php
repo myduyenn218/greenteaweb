@@ -41,3 +41,4 @@ Route::get('/my-project', function () {
 Route::get('/profile', [User\Profile::class,'showProfile']);
 
 Route::post('/profile', [User\Profile::class,'changeProfile'])->name('changprofile');
+
