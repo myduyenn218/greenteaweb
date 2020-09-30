@@ -1,232 +1,199 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
-@section('title', 'Login')@section('style')
-    <style>
-        html,
-        body,
+@section('title', 'Login')
+@section('style')
+<style>
+    .white-skin .navbar {
+        background-color: #3f51b5;
+    }
 
-        @media (min-width: 560px) and (max-width: 740px) {
+    .avt-wrapper {
+        height: 100px;
+        width: 100px;
+    }
 
-            html,
-            body,
-            header,
-            .view {
-                height: 650px;
-            }
-        }
+    #avt_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
 
-        @media (min-width: 800px) and (max-width: 850px) {
-
-            html,
-            body,
-            header,
-            .view {
-                height: 650px;
-            }
-        }
-
-        .white-skin .navbar {
-            background-color: #3f51b5;
-        }
-    </style>
 @endsection
 @section('content')
-    <body class="fixed-sn white-skin">
-    <!-- Main Navigation -->
-    <header>
-    @include('layouts.menu')
-    <!-- Sidebar navigation -->
-        <div id="slide-out" class="side-nav sn-bg-4 fixed">
-            <ul class="custom-scrollbar">
-                <!-- Logo -->
-                <li class="logo-sn waves-effect py-3">
-                    <div class="text-center">
-                        <a href="#" class="pl-0"><img
-                                src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"/></a>
-                    </div>
-                </li>
+<!-- Main layout -->
+<main>
+    <div class="container-fluid">
 
-            </ul>
-            <div class="sidenav-bg mask-strong"></div>
-        </div>
-        <!-- Sidebar navigation -->
+        <!-- Section: Edit Account -->
+        <section class="section">
+            <!-- First row -->
+            <div class="row">
+                <!-- First column -->
+                <div class="col-lg-4 mb-4">
 
-        <!-- Navbar -->
-        <!-- Navbar -->
-    </header>
-    <!-- Main Navigation -->
+                    <!-- Card -->
+                    <div class="card card-cascade narrower">
 
-    <!-- Main layout -->
-    <main>
-        <div class="container-fluid">
-
-            <!-- Section: Edit Account -->
-            <section class="section">
-                <!-- First row -->
-                <div class="row">
-                    <!-- First column -->
-                    <div class="col-lg-4 mb-4">
-
-                        <!-- Card -->
-                        <div class="card card-cascade narrower">
-
-                            <!-- Card image -->
-                            <div class="view view-cascade gradient-card-header mdb-color lighten-3">
-                                <h5 class="mb-0 font-weight-bold">Edit Photo</h5>
-                                @error('avatar')
-                                <h6>{{ $message }}</h6>
-                                @enderror
-
-                            </div>
-                            <!-- Card image -->
-
-                            <!-- Card content -->
-                            <div class="card-body card-body-cascade text-center">
-                                    <img
-                                        src="{{$user->avatar==null?"https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg":$user->avatar}}"
-                                        alt="User Photo"
-                                        class="z-depth-1 mb-3 mx-auto"/>
-
-                                    <p class="text-muted"><small>Profile photo will be changed automatically</small></p>
-                                    <div class="row flex-center">
-                                        <input type="file" name="file" accept="image/*"
-                                               class="btn btn-info btn-rounded btn-sm">Upload New Photo</input>
-                                        <br>
-                                        <button type="submit" class="btn btn-danger btn-rounded btn-sm">Upload</button>
-                                    </div>
-                            </div>
-                            <!-- Card content -->
+                        <!-- Card image -->
+                        <div class="view view-cascade gradient-card-header mdb-color">
+                            <h5 class="mb-0 font-weight-bold">Edit Photo</h5>
+                            @error('avatar')
+                            <h6>{{ $message }}</h6>
+                            @enderror
 
                         </div>
-                        <!-- Card -->
+                        <!-- Card image -->
 
-                    </div>
-                    <!-- First column -->
-
-                    <!-- Second column -->
-                    <div class="col-lg-8 mb-4">
-
-                        <!-- Card -->
-                        <div class="card card-cascade narrower">
-
-                            <!-- Card image -->
-                            <div class="view view-cascade gradient-card-header mdb-color lighten-3">
-                                <h5 class="mb-0 font-weight-bold">Edit Account</h5>
-                                @if(Session::has('mes'))
-                                    <small class="form-text text-success">{{ Session::get('ok') }}</small>
-                                @endif
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade text-center">
+                            <div class="mx-auto avt-wrapper">
+                                <img id='avt_img'
+                                    src="{{$user->avatar==null?"https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg":$user->avatar}}"
+                                    alt="User Photo" class="z-depth-1 mb-3 mx-auto" />
                             </div>
-                            <!-- Card image -->
 
-                            <!-- Card content -->
-                            <div class="card-body card-body-cascade text-center">
 
-                                <!-- Edit Form -->
-                                <form method="POST" action="{{route('changprofile')}}" >
-                                    @csrf
-                                    <div class="row">
-                                        <!-- First column -->
-                                        <div class="col-md-6">
-                                            <div class="md-form mb-0">
-                                                <input type="text" id="form81" name="first_name"
-                                                       value="{{$user->first_name}}" class="form-control validate">
-                                                <label for="form81" data-error="wrong" data-success="right">First
-                                                    name</label>
-                                            </div>
-                                        </div>
-
-                                        <!-- Second column -->
-                                        <div class="col-md-6">
-                                            <div class="md-form mb-0">
-                                                <input type="text" id="form82" name="last_name"
-                                                       value="{{$user->last_name}}" class="form-control validate">
-                                                <label for="form82" data-error="wrong" data-success="right">Last
-                                                    name</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- First row -->
-
-                                    <!-- Second row -->
-                                    <div class="row">
-
-                                        <!-- First column -->
-                                        <div class="col-md-6">
-                                            <div class="md-form mb-0">
-                                                <input type="email" name="email" value="{{$user->email}}" disabled
-                                                       id="form76" class="form-control validate">
-                                                <label for="form76">Email address</label>
-                                            </div>
-                                        </div>
-                                        <!-- Second column -->
-
-                                        <div class="col-md-6">
-                                            <div class="md-form mb-0">
-                                                <input type="text" id="form77" name="phone" value="{{$user->phone}}"
-                                                       class="form-control validate">
-                                                <label for="form77" data-error="wrong"
-                                                       data-success="right">Phone</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Second row -->
-
-                                    <!-- Third row -->
-                                    <div class="row">
-
-                                        <!-- First column -->
-                                        <div class="col-md-12">
-                                            <div class="md-form mb-0">
-                                                <textarea type="text" name="content" id="form78"
-                                                          class="md-textarea form-control"
-                                                          rows="3">{{$user->content}}</textarea>
-                                                <label for="form78">About me</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Third row -->
-
-                                    <!-- Fourth row -->
-                                    <div class="row">
-                                        <div class="col-md-12 text-center my-4">
-                                            <input type="submit" value="Update Account"
-                                                   class="btn btn-info btn-rounded">
-                                        </div>
-                                    </div>
-                                    <!-- Fourth row -->
-
-                                </form>
-                                <!-- Edit Form -->
-
+                            <p class="text-muted"><small>Profile photo will be changed automatically</small></p>
+                            <div class="row flex-center">
+                                <input id="avatar_val" type="text" class="form-control"
+                                    value="{{ old('avatar',$user->avatar) }}" style=" width: 88%;float: left;"
+                                    name="avatar" required placeholder="Ảnh đại diện" tabindex="2">
+                                <button id="avatar_open"
+                                    class="btn btn-indigo btn-rounded btn-sm waves-effect waves-light">Upload New
+                                    Photo</button>
+                                <br>
+                                <button
+                                    class="btn btn-danger btn-rounded btn-sm waves-effect waves-light">Delete</button>
                             </div>
-                            <!-- Card content -->
-
                         </div>
-                        <!-- Card -->
+                        <!-- Card content -->
 
                     </div>
-                    <!-- Second column -->
+                    <!-- Card -->
 
                 </div>
-                <!-- First row -->
+                <!-- First column -->
 
-            </section>
-            <!-- Section: Edit Account -->
+                <!-- Second column -->
+                <div class="col-lg-8 mb-4">
 
-        </div>
+                    <!-- Card -->
+                    <div class="card card-cascade narrower">
 
-    </main>
-    <!-- Main layout -->
+                        <!-- Card image -->
+                        <div class="view view-cascade gradient-card-header mdb-color">
+                            <h5 class="mb-0 font-weight-bold">Edit Account</h5>
+                            @if(Session::has('mes'))
+                            <small class="form-text text-success">{{ Session::get('ok') }}</small>
+                            @endif
+                        </div>
+                        <!-- Card image -->
 
-    <!-- SCRIPTS -->
-    <!-- SCRIPTS -->
-    @include('layouts.script')
-    <!-- TinyMCE -->
-    <script type="text/javascript" src="../../js/vendor/tinymce/tinymce.min.js"></script>
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade text-center">
 
-    <!-- Custom scripts -->
-    <script>
-        // SideNav Initialization
+                            <!-- Edit Form -->
+                            <form method="POST" action="{{route('changprofile')}}">
+                                @csrf
+                                <div class="row">
+                                    <!-- First column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="form81" name="first_name"
+                                                value="{{$user->first_name}}" class="form-control validate">
+                                            <label for="form81" data-error="wrong" data-success="right">First
+                                                name</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Second column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="form82" name="last_name" value="{{$user->last_name}}"
+                                                class="form-control validate">
+                                            <label for="form82" data-error="wrong" data-success="right">Last
+                                                name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- First row -->
+
+                                <!-- Second row -->
+                                <div class="row">
+
+                                    <!-- First column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="email" name="email" value="{{$user->email}}" disabled
+                                                id="form76" class="form-control validate">
+                                            <label for="form76">Email address</label>
+                                        </div>
+                                    </div>
+                                    <!-- Second column -->
+
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="form77" name="phone" value="{{$user->phone}}"
+                                                class="form-control validate">
+                                            <label for="form77" data-error="wrong" data-success="right">Phone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second row -->
+
+                                <!-- Third row -->
+                                <div class="row">
+
+                                    <!-- First column -->
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <textarea type="text" name="content" id="form78"
+                                                class="md-textarea form-control" rows="3">{{$user->content}}</textarea>
+                                            <label for="form78">About me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Third row -->
+
+                                <!-- Fourth row -->
+                                <div class="row">
+                                    <div class="col-md-12 text-center my-4">
+                                        <input type="submit" value="Update Account"
+                                            class="btn btn-indigo  fo btn-rounded">
+                                    </div>
+                                </div>
+                                <!-- Fourth row -->
+
+                            </form>
+                            <!-- Edit Form -->
+
+                        </div>
+                        <!-- Card content -->
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+                <!-- Second column -->
+
+            </div>
+            <!-- First row -->
+
+        </section>
+        <!-- Section: Edit Account -->
+
+    </div>
+
+</main>
+<!-- Main layout -->
+@endsection
+
+@section('script')
+<script type="text/javascript" src="{{asset('js/vendor/tinymce/tinymce.min.js')}}"></script>
+<!-- Custom scripts -->
+<script>
+    // SideNav Initialization
         $(".button-collapse").sideNav();
 
         var container = document.querySelector(".custom-scrollbar");
@@ -242,6 +209,13 @@
             menubar: false,
             height: "294",
         });
-    </script>
-    </body>
+</script>
+<script src="{{asset('plugin/ckfinder/ckfinder.js')}}"></script>
+<script src="{{asset('js/ckfinder.js')}}"></script>
+
+<script language="JavaScript">
+    $('#avatar_open').click(function () {
+            avatar('avatar_val','avt_img');
+        });
+</script>
 @endsection

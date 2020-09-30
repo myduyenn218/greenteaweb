@@ -45,10 +45,13 @@ class LoginControler extends Controller
             // check
             if ($user && Hash::check($r->get('pass'), $user->password)) {
                 Session::put('auth', $user);
+                Session::put('email', $user->email);
+                Session::put('host', env('APP_URL'));
 
                 session()->forget('loginAttempt');
                 session()->forget('reCaptcha');
                 session()->forget('blockLogin');
+
 
                 return redirect('/');
             } else {
