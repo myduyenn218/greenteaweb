@@ -35,10 +35,12 @@ Route::get('/activity', "App\\Http\\Controllers\\ActivityController@activity");
 Route::get('/page-create', function () {
     return view('page-creator');
 });
+Route::get('/install-windown', "App\\Http\\Controllers\\InstallWindownController@install");
+Route::get('/logout',[Auth\LoginControler::class,'logout']);
 Route::get('/my-project', function () {
     return view('my-project');
 });
 Route::get('/profile', [User\Profile::class,'showProfile']);
 
 Route::post('/profile', [User\Profile::class,'changeProfile'])->name('changprofile');
-
+Route::get('/createpage',[Admin\ManagePage::class,'showCreatePage'])->middleware(\App\Http\Middleware\Admin\CheckLogin::class);
