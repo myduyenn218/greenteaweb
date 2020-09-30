@@ -20,6 +20,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{asset('/activity')}}">Activity</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{asset('/install-windown')}}">Install Windown</a>
+                </li>
             </ul>
             <form class="form-inline">
                 <div class="md-form my-0">
