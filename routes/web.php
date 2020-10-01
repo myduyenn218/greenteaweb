@@ -17,30 +17,34 @@ use App\Http\Controllers\User;
 //Route::get('/', function () {
 //    return view('post');
 //});
-Route::get("/",[\App\Http\Controllers\HomeController::class,'home']);
+Route::get("/", [\App\Http\Controllers\HomeController::class, 'home']);
 
-Route::get("login",[Auth\LoginControler::class,'showLogin']);
-Route::post("login",[Auth\LoginControler::class,'doLogin'])->name("login");
+Route::get("login", [Auth\LoginControler::class, 'showLogin']);
+Route::post("login", [Auth\LoginControler::class, 'doLogin'])->name("login");
 
-Route::get('register',[Auth\RegisterController::class,'showRegister'])->name('register');
-Route::post('register',[Auth\RegisterController::class,'doRegister'])->name('register');
-Route::get('confirmemail/{email}/{key}', [Auth\RegisterController::class,'confirmEmail'])->name('confirmemail');
+Route::get('register', [Auth\RegisterController::class, 'showRegister'])->name('register');
+Route::post('register', [Auth\RegisterController::class, 'doRegister'])->name('register');
+Route::get('confirmemail/{email}/{key}', [Auth\RegisterController::class, 'confirmEmail'])->name('confirmemail');
 
-Route::get('forgotpass', [Auth\ForgetPasswordController::class,'showForgetPass'])->name('forgotpass');
-Route::post('forgotpass', [Auth\ForgetPasswordController::class,'doForgetPass'])->name('forgotpass');
-Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::class,'doConfirmPassword'])->name('doconfirmpass');
+Route::get('forgotpass', [Auth\ForgetPasswordController::class, 'showForgetPass'])->name('forgotpass');
+Route::post('forgotpass', [Auth\ForgetPasswordController::class, 'doForgetPass'])->name('forgotpass');
+Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::class, 'doConfirmPassword'])->name('doconfirmpass');
 
+Route::get('/team', "App\\Http\\Controllers\\TeamController@team");
 Route::get('/product', "App\\Http\\Controllers\\ProductController@product");
 Route::get('/activity', "App\\Http\\Controllers\\ActivityController@activity");
 Route::get('/page-create', function () {
     return view('page-creator');
 });
 Route::get('/install-windown', "App\\Http\\Controllers\\InstallWindownController@install");
-Route::get('/logout',[Auth\LoginControler::class,'logout']);
+Route::get('/logout', [Auth\LoginControler::class, 'logout']);
 Route::get('/my-project', function () {
     return view('my-project');
 });
-Route::get('/profile', [User\Profile::class,'showProfile']);
+Route::get('/detail', function () {
+    return view('detail');
+});
+Route::get('/profile', [User\Profile::class, 'showProfile']);
 
-Route::post('/profile', [User\Profile::class,'changeProfile'])->name('changprofile');
-Route::get('/createpage',[Admin\ManagePage::class,'showCreatePage'])->middleware(\App\Http\Middleware\Admin\CheckLogin::class);
+Route::post('/profile', [User\Profile::class, 'changeProfile'])->name('changprofile');
+Route::get('/createpage', [Admin\ManagePage::class, 'showCreatePage'])->middleware(\App\Http\Middleware\Admin\CheckLogin::class);

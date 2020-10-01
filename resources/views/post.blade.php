@@ -77,7 +77,7 @@
             <section class="my-5 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
 
                 <!-- Section heading -->
-                <h2 class="text-center my-5 h1">US PROJECT</h2>
+                <h2 class="text-center my-5 h1">OUR PROJECT</h2>
 
                 <!-- Section description -->
                 <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số

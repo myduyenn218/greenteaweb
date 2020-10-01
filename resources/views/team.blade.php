@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Install Windown')
+@section('title', 'Home')
 
 @section('content')
 @section('style')
@@ -10,7 +10,7 @@
     body,
     header,
     .jarallax {
-        height: 100px;
+        height: 700px;
     }
 
     @media (max-width: 740px) {
@@ -32,10 +32,6 @@
             height: 100vh;
         }
     }
-
-    .post-page .navbar:not(.top-nav-collapse) {
-        background: #4285f4 !important;
-    }
 </style>
 @endsection
 
@@ -45,7 +41,29 @@
     <header>
 
         @include('layouts.menu')
-
+        <!-- Intro Section -->
+        <div class="view jarallax" data-jarallax='{"speed": 0.2}'
+            style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask rgba-black-light">
+                <div class="container h-100 d-flex justify-content-center align-items-center">
+                    <div class="row pt-5 mt-3">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown"
+                                    data-wow-delay="0.3s"><strong>welcome
+                                        to greentea team</strong></h1>
+                                <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+                                <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s">
+                                    <strong>Photography &
+                                        design</strong></h5>
+                                <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">portfolio</a>
+                                <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </header>
     <!-- Main Navigation -->
@@ -55,45 +73,60 @@
 
         <div class="container">
 
-            <div class="card card-signup z-depth-1">
+            <!-- Section: Blog v.3 -->
+            <section class="my-5 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
 
-                <div class="card-body text-center">
+                <!-- Section heading -->
+                <h2 class="text-center my-5 h1">OUR PROJECT</h2>
 
-                    <img src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
-                        class="logo">
-                    <h3 class="card-title my-2">Send message</h3>
-                    <p class="slogan">It's easy to give a feedback!</p>
+                <!-- Section description -->
+                <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số
+                    dự án mà chúng tôi đang triển khai và thực hiện.</p>
+                @foreach ($users as $user)
 
-                    <div class="md-form md-outline">
-                        <input type="text" id="username12" class="form-control">
-                        <label for="username12" class="">Username</label>
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-4 mb-4">
+                        <!-- Featured image -->
+                        <div class="view overlay z-depth-1">
+                            <img src="{{$user->avt}}" class="img-fluid" alt="First sample image">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
                     </div>
+                    <!-- Grid column -->
 
-                    <div class="md-form md-outline">
-                        <input type="email" id="email12" class="form-control">
-                        <label for="email12">E-mail</label>
+                    <!-- Grid column -->
+                    <div class="col-lg-7 mb-4">
+                        <!-- Excerpt -->
+                        <a href="" class="teal-text">
+                            <h6 class="pb-1"><i class="fas fa-heart"></i><strong>
+                                </strong></h6>
+                        </a>
+                        <h4 class="mb-4"><strong>{{$user->last_name}} {{$user->first_name}}</strong></h4>
+                        <p>{{$user->content}}.</p>
+                        {{-- <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p> --}}
+                        <a class="btn btn-primary">Read more</a>
                     </div>
-                    <div class="md-form md-outline">
-                        <input type="text" id="" class="form-control">
-                        <label for="email12">Phone</label>
-                    </div>
-
-                    <!-- Basic textarea -->
-                    <div class="md-form md-outline">
-                        <textarea type="text" id="form1012" class="md-textarea form-control" rows="3"></textarea>
-                        <label for="form1012">Messager</label>
-                    </div>
-
-                    <div class="card-foter text-right">
-                        <button type="button" class="btn btn-outline-warning btn-sm waves-effect waves-light"
-                            style="width: 140px;">Send message</button>
-                    </div>
+                    <!-- Grid column -->
 
                 </div>
+                <!-- Grid row -->
+
+                <hr class="mb-5">
+                @endforeach
+                {{ $users->render('pagination') }}
+
+                <!-- Grid row -->
 
 
-            </div>
+            </section>
+            <!-- Section: Blog v.3 -->
 
+            <hr class="mb-5">
 
 
 
