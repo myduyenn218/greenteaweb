@@ -10,6 +10,6 @@ class Image extends Model
     use HasFactory;
     public function  job()
     {
-        return $this->belongsTo(Project::class, 'product_id');
+        return $this->belongsTo(Project::class, 'post_id');
     }
 }

@@ -17,6 +17,7 @@ class LoginControler extends Controller
 
     public function doLogin(Request $r)
     {
+        session_start();
         // Check the session whether being locked or not
         if ($this->isNotLocked()) {
 
@@ -45,15 +46,17 @@ class LoginControler extends Controller
             // check
             if ($user && Hash::check($r->get('pass'), $user->password)) {
                 Session::put('auth', $user);
-                Session::put('email', $user->email);
-                Session::put('host', env('APP_URL'));
+
+                $_SESSION['host'] = env('APP_URL');
+                $_SESSION['auth'] = $user;
+                $_SESSION['email'] = $user->email;
 
                 session()->forget('loginAttempt');
                 session()->forget('reCaptcha');
                 session()->forget('blockLogin');
 
 
-                return redirect('/');
+                return redirect()->intended('/');
             } else {
                 // count attempt failed
                 $this->attemptsLoginFailed();

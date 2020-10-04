@@ -33,9 +33,6 @@ Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::cl
 Route::get('/team', "App\\Http\\Controllers\\TeamController@team");
 Route::get('/product', "App\\Http\\Controllers\\ProductController@product");
 Route::get('/activity', "App\\Http\\Controllers\\ActivityController@activity");
-Route::get('/page-create', function () {
-    return view('page-creator');
-});
 Route::get('/install-windown', "App\\Http\\Controllers\\InstallWindownController@install");
 Route::get('/logout', [Auth\LoginControler::class, 'logout']);
 Route::get('/my-project', function () {
@@ -44,7 +41,19 @@ Route::get('/my-project', function () {
 Route::get('/detail', function () {
     return view('detail');
 });
-Route::get('/profile', [User\Profile::class, 'showProfile']);
+// Route::get('/profile', [User\Profile::class, 'showProfile'])->middleware(\App\Http\Middleware\Admin\CheckLogin::class);
 
-Route::post('/profile', [User\Profile::class, 'changeProfile'])->name('changprofile');
-Route::get('/createpage', [Admin\ManagePage::class, 'showCreatePage'])->middleware(\App\Http\Middleware\Admin\CheckLogin::class);
+// Route::post('/profile', [User\Profile::class, 'changeProfile'])->name('changeProfile')->middleware(\App\Http\Middleware\Admin\CheckLogin::class);
+// Route::get('/createpage', [App\http\Controllers\Admin\ManagePage::class, 'showCreatePage'])->middleware(\App\Http\Middleware\Admin\CheckLogin::class);
+
+
+Route::resource('posts', App\http\Controllers\Admin\PostController::class);
+
+Route::middleware(['checkLogin'])->group(function () {
+    Route::get('/profile', [User\Profile::class, 'showProfile']);
+    Route::post('/profile', [User\Profile::class, 'changeProfile'])->name('changeProfile');
+
+    Route::get('/create-page', [App\http\Controllers\Admin\CreatePostController::class, 'index']);
+    Route::post('/create-page', [App\http\Controllers\Admin\CreatePostController::class, 'create'])->name('create-page');
+
+});

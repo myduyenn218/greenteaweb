@@ -178,7 +178,7 @@
                 <!-- Section description -->
                 <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số
                     dự án mà chúng tôi đang triển khai và thực hiện.</p>
-                @foreach ($activitis as $activity)
+                @foreach ($activities as $activity)
 
                 <!-- Grid row -->
                 <div class="row">
@@ -213,7 +213,7 @@
                 <!-- Grid row -->
 
                 @endforeach
-                {{ $activitis->render('pagination') }}
+                {{ $activities->render('pagination') }}
 
                 <!-- Grid row -->
 

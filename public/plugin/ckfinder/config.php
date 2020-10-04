@@ -35,8 +35,7 @@ $config = array();
 
 $config['authentication'] = function () {
     //	if(session('auth')->exists())return true;
-    // return isset($_SESSION['auth']) && $_SESSION['auth'];
-    return true;
+    return isset($_SESSION['auth']) && $_SESSION['auth'];
 };
 
 /*============================ License Key ============================================*/

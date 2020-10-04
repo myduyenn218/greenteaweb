@@ -94,7 +94,7 @@
                         <div class="card-body card-body-cascade text-center">
 
                             <!-- Edit Form -->
-                            <form method="POST" action="{{route('changprofile')}}">
+                            <form method="POST" action="{{route('changeProfile')}}">
                                 @csrf
                                 <div class="row">
                                     <!-- First column -->

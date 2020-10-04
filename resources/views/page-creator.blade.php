@@ -395,16 +395,17 @@
             <!-- Section: Create Page -->
             <section class="my-5">
                 <!-- Grid row -->
-                <div class="row justify-content-center">
+                <form class="row justify-content-center" method="POST" action={{route('create-page')}}>
+                    @csrf
                     <!-- Grid column -->
                     <div class="col-lg-10">
                         <!-- First card -->
                         <div class="card mb-4 post-title-panel">
                             <div class="card-body">
                                 <div class="md-form mt-1 mb-0">
-                                    <input type="text" id="form1" class="form-control"
-                                        value="Lorem ipsum dolor sit amet delit" />
-                                    <label class="form-check-label" for="form1" class="">Post title</label>
+                                    <input type="text" id="form1" name="title" class="form-control"
+                                        placeholder="Hoạt động..." />
+                                    <label class="form-check-label" for="form1" class="">Tiêu đề</label>
                                 </div>
                             </div>
                         </div>
@@ -412,28 +413,21 @@
 
                         <!-- Second card -->
                         <div class="card mb-4">
-                            <textarea name="" id="post_content"></textarea>
+                            <textarea name="content" id="post_content"></textarea>
                         </div>
                         <!-- Second card -->
-
-                        <!-- Third Card -->
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="md-form mb-0 mt-2">
-                                    <textarea type="text" id="form7" class="md-textarea form-control"
-                                        rows="3"></textarea>
-                                    <label class="form-check-label" for="form7">Custom CSS Code</label>
-                                </div>
-                            </div>
+                        <div class="text-right">
+                            <button class="btn btn-primary waves-effect waves-light">Publish</button>
                         </div>
-                        <!-- Third Card -->
                     </div>
                     <!-- Grid column -->
+                </form>
 
-                </div>
-                <!-- Grid row -->
+                <!-- G  rid row -->
             </section>
             <!-- Section: Create Page -->
+
+
         </div>
     </main>
     <!-- Main layout -->
@@ -442,7 +436,9 @@
     <!-- SCRIPTS -->
     @include('layouts.script')
     <!-- TinyMCE -->
-    <script type="text/javascript" src="../../js/vendor/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/vendor/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{asset('plugin/ckeditor/ckeditor.js')}}"></script>
+    <script src="{{asset('plugin/ckfinder/ckfinder.js')}}"></script>
 
     <!-- Custom scripts -->
     <script>
@@ -456,11 +452,17 @@
                 minScrollbarLength: 20,
             });
 
-            // TinyMCE Initialization
-            tinymce.init({
-                selector: "#post_content",
-                menubar: false,
-                height: "294",
-            });
+           
+                var editor = CKEDITOR.replace('post_content',{
+                    height: 300
+                });
+                CKFinder.setupCKEditor( editor );
+
+                
     </script>
+    @if ($mess)
+    <script>
+        toastr.success('{{$mess}}');
+    </script>
+    @endif
 </body>
