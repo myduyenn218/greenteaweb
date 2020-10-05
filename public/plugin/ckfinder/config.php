@@ -78,7 +78,8 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => $_SESSION['host'] . '/data/',
+    // 'baseUrl'      => $_SESSION['host'] . '/data/',
+    'baseUrl'      =>  'data',
     //    'root'         => __DIR__.'../../data', // Can be used to explicitly set the
     // CKFinder user files directory.
     'chmodFiles'   => 0777,

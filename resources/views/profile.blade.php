@@ -2,6 +2,7 @@
 
 @section('title', 'Login')
 @section('style')
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <style>
     .white-skin .navbar {
         background-color: #3f51b5;
@@ -20,6 +21,7 @@
 </style>
 
 @endsection
+
 @section('content')
 <!-- Main layout -->
 <main>
@@ -214,8 +216,23 @@
 <script src="{{asset('js/ckfinder.js')}}"></script>
 
 <script language="JavaScript">
-    $('#avatar_open').click(function () {
-            avatar('avatar_val','avt_img');
+    $('#avatar_open').click(async function () {
+        await  avatar('avatar_val','avt_img');
+
+        // save to DB
+        
+                // $.ajax({
+                // type:'POST',
+                // url:'/change-avt',
+                // contentType: "application/json; charset=utf-8",
+                // dataType: "json",
+                // headers: {
+                // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                // data: { avt : $('#avatar_val').val(), },
+                // success:function(result){
+                //     console.log('success')
+                // }
+                // });       
         });
 </script>
 @endsection

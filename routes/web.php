@@ -14,19 +14,20 @@ use App\Http\Controllers\User;
 |
 */
 
-//Route::get('/', function () {
-//    return view('post');
-//});
-Route::get("/", [\App\Http\Controllers\HomeController::class, 'home']);
+Route::get('/', function () {
+    return view('dashboard');
+});
+
+// Route::get("/", [\App\Http\Controllers\HomeController::class, 'home']);
 
 Route::get("login", [Auth\LoginControler::class, 'showLogin']);
 Route::post("login", [Auth\LoginControler::class, 'doLogin'])->name("login");
 
-Route::get('register', [Auth\RegisterController::class, 'showRegister'])->name('register');
+Route::get('register', [Auth\RegisterController::class, 'showRegister']);
 Route::post('register', [Auth\RegisterController::class, 'doRegister'])->name('register');
 Route::get('confirmemail/{email}/{key}', [Auth\RegisterController::class, 'confirmEmail'])->name('confirmemail');
 
-Route::get('forgotpass', [Auth\ForgetPasswordController::class, 'showForgetPass'])->name('forgotpass');
+Route::get('forgotpass', [Auth\ForgetPasswordController::class, 'showForgetPass']);
 Route::post('forgotpass', [Auth\ForgetPasswordController::class, 'doForgetPass'])->name('forgotpass');
 Route::get('confirmforgetpass/{email}/{key}', [Auth\ForgetPasswordController::class, 'doConfirmPassword'])->name('doconfirmpass');
 
@@ -50,10 +51,21 @@ Route::get('/detail', function () {
 Route::resource('posts', App\http\Controllers\Admin\PostController::class);
 
 Route::middleware(['checkLogin'])->group(function () {
+    
     Route::get('/profile', [User\Profile::class, 'showProfile']);
     Route::post('/profile', [User\Profile::class, 'changeProfile'])->name('changeProfile');
+    Route::post('/change-avt/{$avt}', [User\Profile::class, 'changeAvt'])->name('change-avt');
 
     Route::get('/create-page', [App\http\Controllers\Admin\CreatePostController::class, 'index']);
     Route::post('/create-page', [App\http\Controllers\Admin\CreatePostController::class, 'create'])->name('create-page');
 
+
+    // Route::controller('UserDatatables', 'App\http\Controllers\Admin\UserDatatablesController', [
+    //     'anyData'  => 'UserDatatables.data',
+    //     // 'getIndex' => 'UserDatatables',
+    // ]);
+
+   
 });
+
+Route::get('UserDatatables.data', [App\http\Controllers\Admin\UserDatatablesController::class, 'anyData'])->name('UserDatatables.data');
