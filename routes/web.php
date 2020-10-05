@@ -14,11 +14,8 @@ use App\Http\Controllers\User;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
 
-// Route::get("/", [\App\Http\Controllers\HomeController::class, 'home']);
+Route::get("/", [\App\Http\Controllers\HomeController::class, 'home']);
 
 Route::get("login", [Auth\LoginControler::class, 'showLogin']);
 Route::post("login", [Auth\LoginControler::class, 'doLogin'])->name("login");
@@ -69,3 +66,6 @@ Route::middleware(['checkLogin'])->group(function () {
 });
 
 Route::get('UserDatatables.data', [App\http\Controllers\Admin\UserDatatablesController::class, 'anyData'])->name('UserDatatables.data');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
