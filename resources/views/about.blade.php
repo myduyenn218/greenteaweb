@@ -139,12 +139,12 @@
                 <!-- Grid row -->
 
                 <div class="row">
-                    @foreach($products as $product)
+                    @foreach($posts as $post)
                     <!-- Grid column -->
                     <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1 mb-2">
-                            <img src="{{$product->images()->first()->url}}" class="img-fluid" alt="First sample
+                            <img src="{{$post->images()->first()->url}}" class="img-fluid" alt="First sample
                             image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
@@ -155,8 +155,8 @@
                         <a href="" class="pink-text">
                             <h6 class="mb-3 mt-3"><i class="fas fa-map "></i><strong> Environment</strong></h6>
                         </a>
-                        <h4 class="font-weight-bold mb-3">{{$product->product_title}}</h4>
-                        <p>{{$product->content}}</p>
+                        <h4 class="font-weight-bold mb-3">{{$post->title}}</h4>
+                        <p>{{$post->content}}</p>
                         <a class="btn btn-primary">Read more</a>
                     </div>
 

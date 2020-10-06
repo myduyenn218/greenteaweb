@@ -12,8 +12,8 @@ class HomeController extends Controller
     public function home()
     {
         $activities = Post::where('type', '=', '0')->paginate(3); // activity
-        $products = Post::where('type', '=', '1')->limit(3)->get(); // activity
+        $posts = Post::where('type', '=', '1')->limit(3)->get(); // activity
         $users = DB::table('users')->whereBetween('student_code', [0, 1])->get();
-        return view('about', ['activities' => $activities, 'users' => $users,  'products' => $products]);
+        return view('about', ['activities' => $activities, 'users' => $users,  'posts' => $posts]);
     }
 }

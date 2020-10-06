@@ -20,26 +20,25 @@
 <main>
     <div class="container">
         <h2 class='mb-3'>Basic example</h2>
-
         <table id="dtBasicExample" class="table" width="100%">
             <thead>
                 <tr>
 
                     <th class="th-sm">ID
                     </th>
-                    <th class="th-sm">First Name
+                    <th class="th-sm">Title
                     </th>
-                    <th class="th-sm">Last Name
+                    <th class="th-sm">Content
                     </th>
-                    <th class="th-sm">Email
+                    <th class="th-sm">Type
                     </th>
                     <th class="th-sm">Is Active
                     </th>
-                    <th class="th-sm">Phone's Number
-                    </th>
                     <th class="th-sm">Created At
                     </th>
-                    <th class="th-sm"> Edit
+                    <th class="th-sm">Updated At
+                    </th>
+                    <th class="th-sm">Edit
                     </th>
                 </tr>
             </thead>
@@ -61,16 +60,16 @@
     $('#dtBasicExample').DataTable({
             processing: true,
             serverSide: true,
-            ajax: '{{ route('UserDatatables.data') }}',
+            ajax: '{{ route('PostDatatables.data') }}',
             columns: [
                 { data: 'id', name: 'id' },
-                { data: 'first_name', name: 'first_name' },
-                { data: 'last_name', name: 'last_name' },
-                { data: 'email', name: 'email' },
-                { data: 'active', name: 'active' },
-                { data: 'phone', name: 'phone' },
+                { data: 'title', name: 'title' },
+                { data: 'content', name: 'content' },
+                { data: 'type', name: 'type' },
+                { data: 'is_active', name: 'is_active' },
                 { data: 'created_at', name: 'created_at' },
-        ],  "columnDefs": [
+                { data: 'updated_at', name: 'updated_at' },
+            ],  "columnDefs": [
             {
                 // The `data` parameter refers to the data for the cell.
                 // The `rows`argument is an object representing all the data for the current row.

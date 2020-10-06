@@ -48,7 +48,7 @@ Route::get('/detail', function () {
 Route::resource('posts', App\http\Controllers\Admin\PostController::class);
 
 Route::middleware(['checkLogin'])->group(function () {
-    
+
     Route::get('/profile', [User\Profile::class, 'showProfile']);
     Route::post('/profile', [User\Profile::class, 'changeProfile'])->name('changeProfile');
     Route::post('/change-avt/{$avt}', [User\Profile::class, 'changeAvt'])->name('change-avt');
@@ -62,10 +62,19 @@ Route::middleware(['checkLogin'])->group(function () {
     //     // 'getIndex' => 'UserDatatables',
     // ]);
 
-   
+
 });
 
 Route::get('UserDatatables.data', [App\http\Controllers\Admin\UserDatatablesController::class, 'anyData'])->name('UserDatatables.data');
 Route::get('/dashboard', function () {
     return view('dashboard');
+});
+
+Route::get('PostDatatables.data', [App\http\Controllers\Admin\PostDatatablesController::class, 'anyData'])->name('PostDatatables.data');
+Route::get('/post-dashboard', function () {
+    return view('post-dashboard');
+});
+
+Route::get('/create-account', function () {
+    return view('create-account');
 });

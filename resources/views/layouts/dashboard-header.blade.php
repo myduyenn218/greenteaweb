@@ -31,10 +31,16 @@
                         <div class="collapsible-body">
                             <ul>
                                 <li>
-                                    <a href="../pages/login.html" class="waves-effect">Manage User</a>
+                                    <a href="{{asset('dashboard')}}" class="waves-effect">Manage User</a>
                                 </li>
                                 <li>
-                                    <a href="../pages/register.html" class="waves-effect">Add User</a>
+                                    <a href="{{asset('create-account')}}" class="waves-effect">Add User</a>
+                                </li>
+                                <li>
+                                    <a href="{{asset('post-dashboard')}}" class="waves-effect">Post</a>
+                                </li>
+                                <li>
+                                    <a href="{{asset('create-page')}}" class="waves-effect">Create Post</a>
                                 </li>
                             </ul>
                         </div>
@@ -56,7 +62,8 @@
                     </li>
                     <li>
                         <a class="collapsible-header waves-effect arrow-r">
-                            <i class="w-fa fab fa-product-hunt"></i>Products<i class="fas fa-angle-down rotate-icon"></i>
+                            <i class="w-fa fab fa-product-hunt"></i>Products<i
+                                class="fas fa-angle-down rotate-icon"></i>
                         </a>
                         <div class="collapsible-body">
                             <ul>
@@ -145,7 +152,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="#">Log Out</a>
-                        <a class="dropdown-item" href="#">My account</a>
+                        <a class="dropdown-item" href="{{asset('profile')}}">My account</a>
                     </div>
                 </li>
 

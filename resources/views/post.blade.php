@@ -82,7 +82,7 @@
                 <!-- Section description -->
                 <p class="text-center mb-5 w-responsive mx-auto">Chào mừng bạn đã đến với GREENTEA. Dưới đây là một số
                     dự án mà chúng tôi đang triển khai và thực hiện.</p>
-                @foreach ($products as $product)
+                @foreach ($posts as $post)
 
                 <!-- Grid row -->
                 <div class="row">
@@ -91,7 +91,7 @@
                     <div class="col-lg-4 mb-4">
                         <!-- Featured image -->
                         <div class="view overlay z-depth-1">
-                            <img src="{{$product->images()->first()->url}}" class="img-fluid" alt="First sample image">
+                            <img src="{{$post->images()->first()->url}}" class="img-fluid" alt="First sample image">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -106,8 +106,8 @@
                             <h6 class="pb-1"><i class="fas fa-heart"></i><strong>
                                 </strong></h6>
                         </a>
-                        <h4 class="mb-4"><strong>{{$product->product_title}}</strong></h4>
-                        <p>{{$product->content}}.</p>
+                        <h4 class="mb-4"><strong>{{$post->title}}</strong></h4>
+                        <p>{{$post->content}}.</p>
                         {{-- <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p> --}}
                         <a class="btn btn-primary">Read more</a>
                     </div>
@@ -118,7 +118,7 @@
 
                 <hr class="mb-5">
                 @endforeach
-                {{ $products->render('pagination') }}
+                {{ $posts->render('pagination') }}
 
                 <!-- Grid row -->
 

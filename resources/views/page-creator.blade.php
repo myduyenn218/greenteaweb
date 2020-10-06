@@ -84,9 +84,9 @@
 
             
 </script>
-@if ($mess)
+@if ($mess ?? '')
 <script>
-    toastr.success('{{$mess}}');
+    toastr.success('{{$mess ?? ''}}');
 </script>
 @endif
 @endsection
